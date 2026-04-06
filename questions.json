@@ -2,6 +2,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 변수 선언 문장에서 ‘3.1415927’의 역할에 대한 설명으 로 올바른 것은?  final float PI = 3.1415927;",
+    "code": "",
+    "lang": "",
     "choices": [
       "변수명",
       "예약어",
@@ -13,6 +15,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 관계 연산자의 사용이 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "if (a == 5) { ... } - 변수 a가 5와 같지 않을 때",
       "if (b != 10) { ... } - 변수 b가 10과 같을 때",
@@ -23,7 +27,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 JAVA 프로그램이 실행되었을 때, 실행 결과는?  public class Main {    public static void main(String[ ] args) {       System.out.print((int) 2.9 + 1.7);    } }",
+    "q": "다음 JAVA 프로그램이 실행되었을 때, 실행 결과는?",
+    "code": "public class Main  {\n    public static void main(String[ ] args)  {\n        System.out.print((int) 2.9 + 1.7);\n    }\n}",
+    "lang": "java",
     "choices": [
       "3.7",
       "4.7",
@@ -34,7 +40,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 중 JAVA 코드의 실행 결과는?  public class Main {     public static void main(String[ ] args) {         System.out.println(“Hello＼nWorld”);     } }",
+    "q": "다음 중 JAVA 코드의 실행 결과는?",
+    "code": "public class Main  {\n    public static void main(String[ ] args)  {\n        System.out.println(“Hello＼nWorld”);\n    }\n}",
+    "lang": "java",
     "choices": [
       "HelloWorld",
       "Hello     World",
@@ -46,6 +54,8 @@
   {
     "source": "시나공 1회",
     "q": "JAVA에서 파일 입출력과 관련된 기능을 제공하는 패키지와  그 안에 포함된 클래스가 올바르게 짝지어진 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "java.net - Socket",
       "java.io - InputStream",
@@ -57,6 +67,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 객체지향 프로그래밍 언어의 특징으로 옳지 않은  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "상속을 통해 코드의 재사용과 확장이 용이하다.",
       "현실 세계의 개체를 부품처럼 만들어 재활용성이 높다.",
@@ -68,6 +80,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 상속성(Inheritance)과 다형성(Polymorphism)에 대 한 설명이 모두 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "상속성 : 코드를 재사용하여 개발 비용을 절감한다.     다형성 : \u0007하나의 클래스가 여러 종류의 메소드를 가질 수 있는  능력이다.",
       "상속성 : \u0007상위 클래스의 속성과 연산을 하위 클래스가 물려받 아 사용한다.     다형성 : \u0007하나의 메시지에 대해 각 객체가 다른 방식으로 응답 한다.",
@@ -79,6 +93,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 자바스크립트(JavaScript)에 대한 설명으로 옳은 것 을 모두 고른 것은?  가. 웹 페이지의 동작을 제어하는 데 사용된다. 나. 객체지향 프로그래밍 언어의 성격을 갖고 있다. 다. \u0007Prototype Link와 Prototype Object를 통해 프로토타입 개념을 활 용한다.",
+    "code": "",
+    "lang": "",
     "choices": [
       "가",
       "가, 나",
@@ -89,7 +105,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 JAVA 코드의 실행 결과는?  public class Main {     public static void main(String[ ] args) {         int i = 0;         int sum = 0;         while (i < 5) {             sum += i;             i++;         }         System.out.println(sum);     } }",
+    "q": "다음 JAVA 코드의 실행 결과는?",
+    "code": "public class Main  {\n    public static void main(String[ ] args)  {\n        int i = 0;\n        int sum = 0;\n        while (i < 5)  {\n            sum += i;\n            i++;\n        }         System.out.println(sum);\n    }\n}",
+    "lang": "java",
     "choices": [
       "10",
       "15",
@@ -101,6 +119,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 JAVA에서 배열을 선언, 생성, 초기화하는 방법으 로 올바르지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "int[ ] arr = new int[5];",
       "int[ ] arr = {1, 2, 3, 4, 5};",
@@ -111,7 +131,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?  inList = [1,2,3,4,5] answer = inList[:3] print(answer)",
+    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?  inList = [1,2,3,4,5] answer = inList[:3]",
+    "code": "print(answer)",
+    "lang": "python",
     "choices": [
       "[1]",
       "[1, 2]",
@@ -122,7 +144,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 파이썬(Python) 코드의 실행 결과는?  fruits = [‘apple’, ‘banana’, ‘cherry’, ‘kiwi’] fruits.remove('banana') fruits.append('grape') fruits.insert(1, 'melon') print(fruits)",
+    "q": "다음 파이썬(Python) 코드의 실행 결과는?",
+    "code": "fruits = [‘apple’, ‘banana’, ‘cherry’, ‘kiwi’] fruits.remove('banana') fruits.append('grape') fruits.insert(1, 'melon')\nprint(fruits)",
+    "lang": "python",
     "choices": [
       "[‘apple’, ‘melon’, ‘cherry’, ‘kiwi’, ‘grape’]",
       "[‘apple’, ‘banana’, ‘melon’, ‘cherry’, ‘kiwi’, ‘grape’]",
@@ -133,18 +157,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 파이썬(Python) 코드의 실행 결과는?  def calculate_sum(start, end):     total = 0     for i in range(start, end):         total += i     return total result = calculate_sum(1, 5) print(result)",
-    "choices": [
-      "10",
-      "15",
-      "20",
-      "25"
-    ],
-    "answer": 0
-  },
-  {
-    "source": "시나공 1회",
     "q": "다음 중 HTML의 테이블 태그와 기능에 대한 설명으로 옳 지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "<table>은 표를 생성하는 데 사용한다.",
       "<tr>은 표의 행(Row)을 정의한다.",
@@ -156,6 +171,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 JavaScript의 배열 속성 및 메소드에 대한 설명으 로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "length 속성은 배열의 요소 개수를 반환한다.",
       "push( ) 메소드는 배열의 끝에 새로운 요소를 추가한다.",
@@ -167,6 +184,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 트리에 대한 중위 순회 운행 결과는?  A B D E F C",
+    "code": "",
+    "lang": "",
     "choices": [
       "A B D C E F",
       "A B C D E F",
@@ -178,6 +197,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 통신 프로토콜의 기본 요소와 거리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "의미(Semantics)",
       "보안(Security)",
@@ -189,6 +210,8 @@
   {
     "source": "시나공 1회",
     "q": "TCP/IP 프로토콜 중 전송 계층 프로토콜은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "HTTP",
       "SMTP",
@@ -200,6 +223,8 @@
   {
     "source": "시나공 1회",
     "q": "개체-관계 모델(E-R Model)에 대한 설명으로 옳지 않은  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "특정 DBMS를 고려한 것은 아니다.",
       "E-R 다이어그램에서 개체 타입은 사각형, 관계 타입은 타원,  속성은 다이아몬드로 나타낸다.",
@@ -211,6 +236,8 @@
   {
     "source": "시나공 1회",
     "q": "인터넷 도메인 네임을 IP Address로 바꿔주는 시스템은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "HTTP",
       "TCP/IP",
@@ -222,6 +249,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 자료에 대하여 선택(Selection) 정렬을 이용하여 오름 차순으로 정렬하고자 한다. 2회전 수행 결과는?  27, 7, 4, 30, 25",
+    "code": "",
+    "lang": "",
     "choices": [
       "4, 7, 25, 27, 30",
       "4, 7, 30, 27, 25",
@@ -233,6 +262,8 @@
   {
     "source": "시나공 1회",
     "q": "데이터베이스의 구조를 3단계로 구분할 때 해당하지 않는  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "내부 스키마",
       "외부 스키마",
@@ -244,6 +275,8 @@
   {
     "source": "시나공 1회",
     "q": "TCP/IP 계층 구조에서 IP의 동작 과정에서의 전송 오류가  발생하는 경우에 대비해 오류 정보를 전송하는 목적으로 사용 하는 프로토콜은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ECP(Error Checking Protocol)",
       "ARP(Address Resolution Protocol)",
@@ -255,6 +288,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 프로토콜(Protocol)의 종류가 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ASCII",
       "DDCMP",
@@ -266,6 +301,8 @@
   {
     "source": "시나공 1회",
     "q": "스택(STACK)의 응용 분야로 거리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "인터럽트의 처리",
       "수식의 계산",
@@ -277,6 +314,8 @@
   {
     "source": "시나공 1회",
     "q": "물리적 데이터베이스 구조의 기본 데이터 단위인 저장 레 코드의 양식을 설계할 때 고려 사항이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "데이터 타입",
       "데이터 값의 분포",
@@ -288,6 +327,8 @@
   {
     "source": "시나공 1회",
     "q": "데이터베이스와 관련된 설명으로 거리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "효율적이고 체계적인 데이터의 관리를 지원",
       "데이터의 중복성을 최소화하면서 일관성을 가진 데이터 처리  지원",
@@ -299,6 +340,8 @@
   {
     "source": "시나공 1회",
     "q": "관계 데이터베이스 모델에서 차수(Degree)의 의미는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "튜플의 수",
       "테이블의 수",
@@ -310,6 +353,8 @@
   {
     "source": "시나공 1회",
     "q": "릴레이션에서 튜플을 유일하게 구별해 주는 속성 또는 속 성들의 조합을 의미하는 키는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Candidate Key",
       "Alternate Key",
@@ -321,6 +366,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 자료 사전(Data Dictionary)에 대한 설명으로 옳지  않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "메타 데이터(Meta Data)라고 한다.",
       "모든 데이터 개체들에 대한 정보를 유지, 관리하는 시스템이 다.",
@@ -332,6 +379,8 @@
   {
     "source": "시나공 1회",
     "q": "학생 테이블의 모든 자료를 검색하는 SQL문으로 옳은 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT % FROM 학생;",
       "SELECT ? FROM 학생;",
@@ -343,6 +392,8 @@
   {
     "source": "시나공 1회",
     "q": "SQL에서 테이블 구조를 정의, 변경, 제거하는 명령을 순서 대로 옳게 나열한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CREATE, MODIFY, DELETE",
       "CREATE, ALTER, DROP",
@@ -353,7 +404,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "관계 데이터베이스의 테이블인 수강(학번, 과목명, 중간성 적, 기말성적)에서 과목명이 “DB”인 모든 튜플들을 성적에 의 해 정렬된 형태로 검색하고자 한다. 이때 정렬 기준은 기말성적 의 내림차순으로 정렬하고 기말성적이 같은 경우는 중간성적 의 오름차순으로 정렬하고자 한다. 다음 SQL 질의문에서  ORDER BY 절의 밑줄 친 부분의 내용으로 옳은 것은 ?  SELECT * FROM 수강 WHERE 과목명= “DB” ORDER BY            ;",
+    "q": "관계 데이터베이스의 테이블인 수강(학번, 과목명, 중간성 적, 기말성적)에서 과목명이 “DB”인 모든 튜플들을 성적에 의 해 정렬된 형태로 검색하고자 한다. 이때 정렬 기준은 기말성적 의 내림차순으로 정렬하고 기말성적이 같은 경우는 중간성적 의 오름차순으로 정렬하고자 한다. 다음 SQL 질의문에서  ORDER BY 절의 밑줄 친 부분의 내용으로 옳은 것은 ?",
+    "code": "SELECT *\nFROM 수강\nWHERE 과목명= “DB”\nORDER BY ;",
+    "lang": "sql",
     "choices": [
       "중간성적 DESC, 기말성적 ASC",
       "기말성적 DESC, 중간성적 ASC",
@@ -365,6 +418,8 @@
   {
     "source": "시나공 1회",
     "q": "사용자 X1에게 department 테이블에 대한 검색 연산을 회 수하는 명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "delete select on department to X1;",
       "remove select on department from X1;",
@@ -376,6 +431,8 @@
   {
     "source": "시나공 1회",
     "q": "관계형 데이터베이스에서 사용하기 가장 적합한 구조적 언 어는 무엇인가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SQL",
       "HTML",
@@ -387,6 +444,8 @@
   {
     "source": "시나공 1회",
     "q": "SQL의 DML에 해당하지 않는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "INSERT",
       "UPDATE",
@@ -397,7 +456,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음의 SQL 명령에서 DISTINCT의 의미를 가장 잘 설명한  것은?  SELECT DISTINCT 학과명 FROM 학생 WHERE 총점 > 80;",
+    "q": "다음의 SQL 명령에서 DISTINCT의 의미를 가장 잘 설명한  것은?",
+    "code": "SELECT DISTINCT 학과명\nFROM 학생\nWHERE 총점 > 80;",
+    "lang": "sql",
     "choices": [
       "학과명이 중복되지 않게 검색한다.",
       "중복된 학과명만 검색한다.",
@@ -408,7 +469,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 SQL문을 올바르게 설명한 것은?  SELECT * FROM STUDENT WHERE SNAME LIKE ‘홍%’;",
+    "q": "다음 SQL문을 올바르게 설명한 것은?",
+    "code": "SELECT *\nFROM STUDENT\nWHERE SNAME LIKE ‘홍%’;",
+    "lang": "sql",
     "choices": [
       "SNAME이 ‘홍’씨로 시작하면 삭제한다.",
       "SNAME이 ‘홍’씨로 시작되는 튜플을 찾는다.",
@@ -420,6 +483,8 @@
   {
     "source": "시나공 1회",
     "q": "데이터 조작문의 유형으로 올바르지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT ~ FROM ~ WHERE ~",
       "INSERT INTO ~ VALUES ~",
@@ -431,6 +496,8 @@
   {
     "source": "시나공 1회",
     "q": "SQL에서 VIEW를 삭제할 때 사용하는 명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ERASE",
       "KILL",
@@ -441,7 +508,9 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 SQL 명령문의 의미로 가장 적절한 것은?  DROP TABLE 부서명;",
+    "q": "다음 SQL 명령문의 의미로 가장 적절한 것은?",
+    "code": "DROP TABLE 부서명;",
+    "lang": "sql",
     "choices": [
       "부서명 테이블을 검색하라.",
       "부서명 테이블을 삭제하라.",
@@ -453,6 +522,8 @@
   {
     "source": "시나공 1회",
     "q": "다중 프로그래밍 환경에서 하나 또는 그 이상의 프로세서 가 가능하지 못한 특정 사건(Event)을 무한정 기다리는 상태를  무엇이라고 하는가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Swapping",
       "Overlay",
@@ -464,6 +535,8 @@
   {
     "source": "시나공 1회",
     "q": "프로세스의 상태 변화 중 우선순위가 가장 높은 프로세스 가 준비 상태에서 실행 상태로 전환되는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "웨이크 업",
       "타이머 종료",
@@ -475,6 +548,8 @@
   {
     "source": "시나공 1회",
     "q": "Windows에 대한 설명으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "다중 작업 환경 지원",
       "32Bit 환경의 CUI 시스템",
@@ -486,6 +561,8 @@
   {
     "source": "시나공 1회",
     "q": "컴퓨터에 하드디스크를 새로 장착하고 부팅 가능한 하드디 스크로 만들기 위한 도스 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "FORMAT C: /S",
       "FORMAT C: /B",
@@ -497,6 +574,8 @@
   {
     "source": "시나공 1회",
     "q": "사용자 인터페이스(UI) 테스트 기법에 대한 설명으로 옳지  않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "페이퍼 프로토타입은 종이로 모형을 만들어 테스트하는 평가  방법이다.",
       "성능 평가는 제품의 학습성, 효율성, 만족도 등을 평가하여 성 능을 개선하는 기법이다.",
@@ -508,6 +587,8 @@
   {
     "source": "시나공 1회",
     "q": "목적 프로그램을 만들지 않고 직접 한 문장씩 번역하여 실 행하는 방식의 언어 처리기는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "인터프리터(Interpreter)",
       "프리프로세서(Preprocessor)",
@@ -519,6 +600,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 중 운영체제를 설명한 것이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "컴퓨터 시스템 장치를 효율적으로 관리",
       "컴퓨터를 사용자가 편리하게 이용 가능",
@@ -530,6 +613,8 @@
   {
     "source": "시나공 1회",
     "q": "하향식 통합 시험을 위해 일시적으로 필요한 조건만을 가 지고 임시로 제공되는 시험용 모듈은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Stub",
       "Driver",
@@ -541,6 +626,8 @@
   {
     "source": "시나공 1회",
     "q": "다음 조건을 이용하여 데이터 디스크 용량을 계산했을 때  결과값은?  •데이터 영역 : 300GB •백업 영역 : 100GB •파일 시스템 오버헤드 : 1.1 •데이터 디스크 여유율 : 1.25 •RAID 여유율 : 1.3 (RAID-5 기준)",
+    "code": "",
+    "lang": "",
     "choices": [
       "715",
       "725",
@@ -552,6 +639,8 @@
   {
     "source": "시나공 1회",
     "q": "UNIX에서 사용할 수 있는 편집기가 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ed",
       "vi",
@@ -563,6 +652,8 @@
   {
     "source": "시나공 1회",
     "q": "현재 작업중인 디렉토리 내의 파일을 열거하는데 사용되는  UNIX의 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "mv",
       "ls",
@@ -574,6 +665,8 @@
   {
     "source": "시나공 1회",
     "q": "블랙박스 검사에 대한 설명으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "인터페이스 결함, 성능 결함, 초기화와 종료 이상 결함 등을  찾아낸다.",
       "각 기능별로 적절한 정보 영역을 정하여 적합한 입력에 대한  출력의 정확성을 점검한다.",
@@ -585,6 +678,8 @@
   {
     "source": "시나공 1회",
     "q": "도스(MS-DOS)에서 지정한 파일의 이름을 바꾸어 주는 명 령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "REN",
       "MD",
@@ -596,6 +691,8 @@
   {
     "source": "시나공 1회",
     "q": "시분할 처리 시스템을 바르게 설명한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "처리할 내용을 일정 기간동안 모았다가 일괄 처리 하는 방식",
       "데이터가 발생하는 즉시 처리하는 방식",
@@ -607,6 +704,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 연산자 우선순위가 가장 높은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "단항 연산자 (++, --, !)",
       "산술 연산자 (*, /, %)",
@@ -618,6 +717,8 @@
   {
     "source": "시나공 2회",
     "q": "Python에서 통계값을 계산하기 위해 사용하는 클래스와 그  안에 포함된 함수가 올바르게 짝지어진 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "datetime – today( )",
       "random – choice( )",
@@ -629,6 +730,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 객체지향 프로그래밍 언어에서 메시지에 대한 설명 으로 가장 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "데이터를 단위별로 정의하는 속성(Attribute)을 의미한다.",
       "유사한 객체들을 묶어서 공통된 특성을 표현하는 요소이다.",
@@ -640,6 +743,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 스크립트 언어의 특징으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "컴파일 과정이 없어 코드를 바로 실행하여 결과를 확인할 수  있다.",
       "런타임 오류 발생 가능성이 낮아 프로그램의 안정성이 높다.",
@@ -651,6 +756,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 주어진 값과 데이터 타입이 올바르게 짝지어진 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "-100 → 부동 소수점 타입",
       "‘A’ → 문자열 타입",
@@ -662,6 +769,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 변수 PI를 프로그램 실행 중 변경되지 않는 상수로  만들기 위한 JAVA 예약어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "const",
       "final",
@@ -673,6 +782,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 비트 연산자 중, 모든 비트가 1일 때만 1을 결과로 반환 하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "^ (xor)",
       "| (or)",
@@ -684,6 +795,8 @@
   {
     "source": "시나공 2회",
     "q": "Python에서 결과가 표시되지 않는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "print(“%d” % (400+400))",
       "print(“200+300”)",
@@ -694,7 +807,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "다음 중 파이썬(Python) 코드의 실행 결과는?  numbers = list(range(1, 11)) result = numbers[::2] print(result)",
+    "q": "다음 중 파이썬(Python) 코드의 실행 결과는?",
+    "code": "numbers = list(range(1, 11))\nresult = numbers[::2]\nprint(\nresult)",
+    "lang": "python",
     "choices": [
       "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
       "[1, 3, 5, 7, 9]",
@@ -705,7 +820,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "사용자가 gilbut sinagong q-net를 입력했을 때, 다음 파이 썬(Python) 코드의 실행 결과는?  data = input( ) words = data.split( ) result = words[1] print(result.upper( ))",
+    "q": "사용자가 gilbut sinagong q-net를 입력했을 때, 다음 파이 썬(Python) 코드의 실행 결과는?  data = input( ) words = data.split( ) result = words[1]",
+    "code": "print(\nresult.upper( ))",
+    "lang": "python",
     "choices": [
       "GILBUT",
       "SINAGONG",
@@ -717,6 +834,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 HTML의 폼 태그와 속성에 대한 설명으로 옳지 않 은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "<form> 태그는 사용자로부터 데이터를 입력받는 양식(form) 을 정의한다.",
       "<input> 태그는 텍스트 입력, 버튼, 체크박스 등 다양한 입력  필드를 만든다.",
@@ -728,6 +847,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 JavaScript 프로그램이 실행되었을 때, 실행 결과는?  var a = [10, 20, 30]; a.push(40); var b = a.shift( ); var c = a.pop( ); document.write(b + c);",
+    "code": "",
+    "lang": "",
     "choices": [
       "50",
       "60",
@@ -739,6 +860,8 @@
   {
     "source": "시나공 2회",
     "q": "회선 프로토콜(Line Protocol)을 가장 잘 설명한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "회선상에서 에러를 감지하기 위해 컴퓨터 측에 설치되어 있는  장치",
       "회선에 접속되어 있는 단말장치를 컴퓨터가 제어하기 위한 프 로그램",
@@ -750,6 +873,8 @@
   {
     "source": "시나공 2회",
     "q": "속성(Attribute)에 대한 설명으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "속성은 개체의 특성을 기술한다.",
       "속성은 데이터베이스를 구성하는 가장 작은 논리적 단위이다.",
@@ -761,6 +886,8 @@
   {
     "source": "시나공 2회",
     "q": "TCP/IP 프로토콜에서 TCP가 해당하는 계층은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "데이터 링크 계층",
       "네트워크 계층",
@@ -772,6 +899,8 @@
   {
     "source": "시나공 2회",
     "q": "B 클래스에서 사용되는 기본 서브넷 마스크는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "255.255.255.0",
       "255.255.0.0",
@@ -783,6 +912,8 @@
   {
     "source": "시나공 2회",
     "q": "개체-관계 모델에 대한 설명으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "오너-멤버(Owner-Member) 관계라고도 한다.",
       "개체 타입과 이들 간의 관계 타입을 기본 요소로 이용하여 현 실 세계를 개념적으로 표현한다.",
@@ -794,6 +925,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 자료를 버블 정렬을 이용하여 오름차순으로 정렬하고 자 할 경우 1회전을 수행한 결과는?  9, 4, 5, 1, 3",
+    "code": "",
+    "lang": "",
     "choices": [
       "4, 5, 1, 3, 9",
       "1, 3, 4, 5, 9",
@@ -805,6 +938,8 @@
   {
     "source": "시나공 2회",
     "q": "데이터베이스에서 하나의 논리적 기능을 수행하기 위한 작 업의 단위 또는 한꺼번에 모두 수행되어야 할 일련의 연산들을  의미하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "트랜잭션",
       "뷰",
@@ -816,6 +951,8 @@
   {
     "source": "시나공 2회",
     "q": "OSI 7계층에서 하위 3계층에 해당하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "세션 계층, 표현 계층, 응용 계층",
       "물리 계층, 데이터링크 계층, 네트워크 계층",
@@ -827,6 +964,8 @@
   {
     "source": "시나공 2회",
     "q": "데이터가 중복되면 자연히 제어가 분산되어 데이터의 정확 성을 유지하기 어렵게 되는데, 이런 경우 데이터베이스의 어떤  규칙에 위배되는가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "데이터 독립성",
       "데이터 무결성",
@@ -838,6 +977,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 OSI 7계층에 대한 설명으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "다른 시스템 간의 원활한 통신을 위해 ISO(국제표준화기구)에 서 제안한 통신 규약(Protocol)이다.",
       "개방형 시스템(Open System) 간의 데이터 통신 시 필요한 장 비 및 처리 방법 등을 7단계로 표준화하여 규정했다.",
@@ -849,6 +990,8 @@
   {
     "source": "시나공 2회",
     "q": "물리적 데이터베이스를 설계하는 전 단계로서, 데이터 모 델링이라 불리는 데이터베이스 설계 단계는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "개념적 데이터베이스 설계",
       "논리적 데이터베이스 설계",
@@ -860,6 +1003,8 @@
   {
     "source": "시나공 2회",
     "q": "데이터베이스 관리자(DBA)의 임무와 거리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "시스템 문서화에 표준을 정하여 시행",
       "복구절차와 무결성 유지를 위한 대책 수립",
@@ -871,6 +1016,8 @@
   {
     "source": "시나공 2회",
     "q": "순서가 있는 리스트에서 데이터의 삽입(Push), 삭제(Pop) 가 한 쪽 끝에서 일어나며, LIFO(Last_In-First-Out)의 특징을  가지는 자료 구조는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Tree",
       "Graph",
@@ -882,6 +1029,8 @@
   {
     "source": "시나공 2회",
     "q": "아래 Tree 구조에 대하여 후위 순회(Postorder)한 결과는?  A B D E G H F C",
+    "code": "",
+    "lang": "",
     "choices": [
       "A → B → D → C → E → G → H → F",
       "D → B → G → H → E → F → C → A",
@@ -893,6 +1042,8 @@
   {
     "source": "시나공 2회",
     "q": "키의 종류 중 유일성과 최소성을 만족하는 속성 또는 속성 들의 집합은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Atomic Key",
       "Super Key",
@@ -904,6 +1055,8 @@
   {
     "source": "시나공 2회",
     "q": "SQL 명령어 중 데이터 정의문(DDL)에 해당하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "UPDATE",
       "CREATE",
@@ -914,7 +1067,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "SQL에서 SELECT 문에 나타날 수 없는 절은?",
+    "q": "SQL에서",
+    "code": "SELECT 문에 나타날 수 없는 절은?",
+    "lang": "sql",
     "choices": [
       "HAVING",
       "GROUP BY",
@@ -926,6 +1081,8 @@
   {
     "source": "시나공 2회",
     "q": "참조 무결성을 유지하기 위하여 DROP문에서 부모 테이블 의 항목 값을 삭제할 경우 자동적으로 자식 테이블의 해당 레 코드를 삭제하기 위한 옵션은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CLUSTER",
       "CASCADE",
@@ -937,6 +1094,8 @@
   {
     "source": "시나공 2회",
     "q": "‘학생’ 테이블에서 3학년이고 컴퓨터공학과인 학생의 이름 만 조회하는 SQL문으로 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT 이름 FROM 학생 WHERE 학년 = 3 AND 학과 =  “컴퓨터공학”;",
       "SELECT 이름 FROM 학생 WHERE 학년 = 3 OR 학과 = “컴 퓨터공학”;",
@@ -947,7 +1106,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "다음은 ‘제품’ 테이블의 ‘단가’를 기준으로 내림차순 정렬하 여 표시하는 SQL문이다. 괄호(㉠, ㉡)에 알맞은 명령은?  Select 제품명, 단가 From 제품 (  ㉠  )  단가 (  ㉡  );",
+    "q": "다음은 ‘제품’ 테이블의 ‘단가’를 기준으로 내림차순 정렬하 여 표시하는 SQL문이다. 괄호(㉠, ㉡)에 알맞은 명령은?",
+    "code": "Select 제품명, 단가\nFrom 제품 (  ㉠  )  단가 (  ㉡  );",
+    "lang": "sql",
     "choices": [
       "㉠ Order To\t ㉡ Asc",
       "㉠ Where\t ㉡ Asc",
@@ -959,6 +1120,8 @@
   {
     "source": "시나공 2회",
     "q": "트랜잭션의 연산이 성공적으로 끝났음을 선언하는 연산 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ROLLBACK",
       "REVOKE",
@@ -970,6 +1133,8 @@
   {
     "source": "시나공 2회",
     "q": "SQL문에서 사용하는 옵션 중 검색 결과에서 레코드의 중 복을 제거할 때 사용하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CASCADE",
       "DISTINCT",
@@ -981,6 +1146,8 @@
   {
     "source": "시나공 2회",
     "q": "판매내역(제품명, 판매수량) 테이블에서 판매수량이 50인  튜플을 삭제하는 SQL문은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DELETE FROM 판매내역 WHERE 판매수량 = 50;",
       "REMOVE FROM 판매내역 WHERE 판매수량 = 50;",
@@ -992,6 +1159,8 @@
   {
     "source": "시나공 2회",
     "q": "상품 테이블을 제거할 때 사용하는 SQL 명령으로 옳은 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ALTER TABLE 상품",
       "CASCADE TABLE 상품",
@@ -1003,6 +1172,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 SQL문의 빈 칸에 들어갈 명령어는?  UPDATE 직원  (     ) 급여 = 급여 * 1.1 WHERE 급여 <= 100000 or 입사일 〈 19990101;",
+    "code": "",
+    "lang": "",
     "choices": [
       "INTO",
       "SET",
@@ -1013,7 +1184,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "다음 SQL문의 실행 결과로 생성되는 튜플 수는? SELECT 급여 FROM 사원; <사원> 테이블 사원ID 사원명 급여 부서ID 101 박철수 30000 1 102 한나라 35000 2 103 김감동 40000 3 104 이구수 35000 2 105 최초록 40000 3",
+    "q": "다음 SQL문의 실행 결과로 생성되는 튜플 수는?",
+    "code": "SELECT 급여\nFROM 사원; <사원> 테이블 사원ID 사원명 급여 부서ID 101 박철수 30000 1 102 한나라 35000 2 103 김감동 40000 3 104 이구수 35000 2 105 최초록 40000 3",
+    "lang": "sql",
     "choices": [
       "1",
       "3",
@@ -1025,6 +1198,8 @@
   {
     "source": "시나공 2회",
     "q": "DDL(Data Define Language)의 명령어 중 스키마, 도메인,  인덱스 등을 정의할 때 사용하는 SQL문은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ALTER",
       "SELECT",
@@ -1035,7 +1210,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "다음 SQL문을 실행한 결과 검색되지 않는 판매수량은?  SELECT 상품명, 판매수량 FROM 판매내역 WHERE 판매수량 >= 100 AND 판매수량 <= 200;",
+    "q": "다음 SQL문을 실행한 결과 검색되지 않는 판매수량은?",
+    "code": "SELECT 상품명, 판매수량\nFROM 판매내역\nWHERE 판매수량 >= 100 AND 판매수량 <= 200;",
+    "lang": "sql",
     "choices": [
       "200",
       "100",
@@ -1047,6 +1224,8 @@
   {
     "source": "시나공 2회",
     "q": "급여 테이블에 데이터를 입력한 후 시간외수당 필드가 누 락되어 이를 추가하고자 할 경우에 사용하는 SQL 명령으로 옳 은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ALTER TABLE",
       "ADD TABLE",
@@ -1058,6 +1237,8 @@
   {
     "source": "시나공 2회",
     "q": "SQL의 기능에 따른 분류 중에서 REVOKE문과 같이 데이 터의 사용 권한을 관리하는데 사용하는 언어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DDL(Data Definition Language)",
       "DML(Data Manipulation Language)",
@@ -1069,6 +1250,8 @@
   {
     "source": "시나공 2회",
     "q": "운영체제(Operating System)의 목적이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "반환 시간 증가",
       "처리 능력 향상",
@@ -1080,6 +1263,8 @@
   {
     "source": "시나공 2회",
     "q": "블랙박스 테스트의 유형으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "경계값 분석",
       "오류 예측",
@@ -1091,6 +1276,8 @@
   {
     "source": "시나공 2회",
     "q": "도스(MS-DOS)의 명령에 관한 설명 중 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CD : 현재의 디렉토리를 변경한다.",
       "RD : 디렉토리를 삭제한다.",
@@ -1102,6 +1289,8 @@
   {
     "source": "시나공 2회",
     "q": "UNIX에서 태스크 스케줄링(Task-Scheduling) 및 기억장 치 관리(Memory Management) 등의 일을 수행하는 부분은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Kernel",
       "Shell",
@@ -1113,6 +1302,8 @@
   {
     "source": "시나공 2회",
     "q": "UNIX에 관한 설명으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "파일 시스템의 배열 형태가 선형적 구조로 되어 있다.",
       "대부분 BASIC 언어로 작성되었다.",
@@ -1124,6 +1315,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 DevOps에 대한 설명으로 가장 적절한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "소프트웨어 테스트를 자동화하는 기법으로, 테스트 자동화에 만 초점을 맞춘 방법론이다.",
       "개발팀과 운영팀이 분리되어 독립적으로 작업하는 방식을 강 조한다.",
@@ -1135,6 +1328,8 @@
   {
     "source": "시나공 2회",
     "q": "애플리케이션 테스트에서 동일한 테스트 케이스로 동일한  테스트를 반복하면 더 이상 결함이 발견되지 않는 현상을 의미 하는 용어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "살충제 패러독스",
       "오류-부재의 궤변",
@@ -1146,6 +1341,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 교착 상태(Dead Lock) 발생의 필요 충분 조건이  아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "상호 배제(Mutual Exclusion)",
       "점유와 대기(Hold and Wait)",
@@ -1157,6 +1354,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 온라인 실시간 시스템의 조회 방식에 가장 적합한  업무는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "객관식 채점 업무",
       "좌석 예약 업무",
@@ -1168,6 +1367,8 @@
   {
     "source": "시나공 2회",
     "q": "프롬프트 상에서 명령어를 직접 입력하여 작업을 수행하는  사용자 인터페이스 방식은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "GUI",
       "NUI",
@@ -1179,6 +1380,8 @@
   {
     "source": "시나공 2회",
     "q": "DOS의 환경 설정 파일(CONFIG.SYS)에 대한 설명으로 옳 지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "도스 운영에 필요한 환경을 설정하는 파일이다.",
       "어느 디렉터리에 존재하는가에 상관없이 제 역할을 수행한다.",
@@ -1190,6 +1393,8 @@
   {
     "source": "시나공 2회",
     "q": "장애나 재해가 발생했을 때 허용 가능한 최대 데이터 손실  시점을 의미하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "RPO",
       "RTO",
@@ -1201,6 +1406,8 @@
   {
     "source": "시나공 2회",
     "q": "언어 번역(Language Translator) 프로그램에 해당하지 않 는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "컴파일러",
       "어셈블러",
@@ -1212,6 +1419,8 @@
   {
     "source": "시나공 2회",
     "q": "운영체제의 스케줄링 기법 중 선점(Preemptive) 스케줄링 에 해당하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SRT",
       "SJF",
@@ -1223,6 +1432,8 @@
   {
     "source": "시나공 2회",
     "q": "다음 중 직접 연결 백업의 특징으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "네트워크 부하가 발생하지 않는다.",
       "외장 하드나 USB를 이용한다.",
@@ -1234,6 +1445,8 @@
   {
     "source": "시나공 3회",
     "q": "JAVA에서 키보드로 입력받은 값을 정수형 변수 score에 저 장하기 위한 코드로 올바른 것은? (단, Scanner 객체 변수명은  input으로 한다.)",
+    "code": "",
+    "lang": "",
     "choices": [
       "int score = input.nextFloat( );",
       "String score = input.nextLine( );",
@@ -1245,6 +1458,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 리스트를 정렬하는 메소드 sort( )에 대한 설명으로  올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "sort( )는 기본적으로 내림차순으로 정렬한다.",
       "sort(reverse=True)는 오름차순으로 정렬한다.",
@@ -1256,6 +1471,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 객체지향 프로그래밍 언어의 구성 요소를 설명한  것 중, 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "객체는 데이터(속성)와 이를 처리하는 연산(메소드)을 결합한  실체이다.",
       "클래스는 공통된 특성을 가진 객체들의 집합으로, 객체의 유 형을 정의한다.",
@@ -1267,6 +1484,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 클라이언트용 스크립트 언어와 서버용 스크립트 언 어가 올바르게 묶인 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "클라이언트용 : PHP, 파이썬",
       "클라이언트용 : 자바스크립트, VB 스크립트",
@@ -1278,6 +1497,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 JAVA의 데이터 타입과 그에 해당하는 크기 및 기억  범위가 올바르게 짝지어진 것은?      타입\t   크기\t    기억 범위",
+    "code": "",
+    "lang": "",
     "choices": [
       "short\t 4 Byte\t -2,147,483,648 ∼ 2,147,438,647",
       "long\t 8 Byte\t -9,223,372,036,854,775,808  \t \t \t ∼ 9,223,372,036,854,775,807",
@@ -1289,6 +1510,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 변수명 작성 규칙에 위배되는 변수명은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "_variable_name",
       "user123",
@@ -1300,6 +1523,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 break문과 continue문에 대한 설명으로 옳지 않은  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "break문은 switch문이나 반복문을 즉시 종료한다.",
       "continue문은 반복문 내에서 특정 조건일 때 남은 코드를 건 너뛰고 다음 반복을 계속 진행한다.",
@@ -1310,18 +1535,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "다음 중 JAVA 코드의 실행 결과는?  class Student {     String name, major;     Student( ) { }     Student(String name, String major) {         this.name = name;         this.major = major;     } } public class Main {     public static void main(String[ ] args) {         Student s1 = new Student( );         s1.name = “시나공”;         s1.major = “프로그래밍”;         Student s2 = new Student(“길벗”, “AI빅데이터”);         \u0007System.out.println(s1.name + “의 전공은 ” +  s2.major + “입니다.”);     } }",
-    "choices": [
-      "시나공의 전공은 프로그래밍입니다.",
-      "시나공의 전공은 AI빅데이터입니다.",
-      "길벗의 전공은 프로그래밍입니다.",
-      "길벗의 전공은 AI빅데이터입니다."
-    ],
-    "answer": 1
-  },
-  {
-    "source": "시나공 3회",
-    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때, 실행 결과는?  def sum_many(*args):     sum = 0     for i in args:        sum = sum + i     return sum result = sum_many(1,2,3) print(result)",
+    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때, 실행 결과는?",
+    "code": "def\nsum_many(*args):\nsum = 0\nfor i in args:\n    sum =\n    sum + i\n    return\n    sum\n    result =\n    sum_many(1,2,3)\n    print(\n    result)",
+    "lang": "python",
     "choices": [
       "6",
       "1",
@@ -1332,7 +1548,22 @@
   },
   {
     "source": "시나공 3회",
+    "q": "다음 중 파이썬(Python) 코드의 실행 결과는?  class Calculator:",
+    "code": "def __init__(self, a, b):         self.a = a         self.b = b\ndef add(self):\n    return self.a + self.b\n    def subtract(self):\n        return self.a - self.b calc = Calculator(10, 5)\n        result_add = calc.add( )\n        result_subtract = calc.subtract( )\n        print(\n        result_add +\n        result_subtract)",
+    "lang": "python",
+    "choices": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "answer": 3
+  },
+  {
+    "source": "시나공 3회",
     "q": "다음 중 HTML 태그와 기능에 대한 설명으로 옳지 않은 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "<p> : 문단(paragraph)을 정의하며, 닫는 태그가 필요 없다.",
       "<h1>~<h6> : 제목을 나타내며, 숫자가 클수록 글자가 작아진 다.",
@@ -1344,6 +1575,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 HTML의 태그와 기능에 대한 설명으로 옳지 않은  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "<mark>: 텍스트에 하이라이트 효과를 주어 강조하는 데 사용 된다.",
       "<cite> : 웹 페이지 내비게이션 링크를 정의하는 데 사용된다.",
@@ -1355,6 +1588,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 예외 처리(Exception Handling)에 대한 설명으로  가장 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "예외는 컴퓨터 하드웨어 문제로만 발생한다.",
       "try ~ catch 문은 예외 처리 기능이 내장되어 있지 않은 언어 에서 사용된다.",
@@ -1366,6 +1601,8 @@
   {
     "source": "시나공 3회",
     "q": "데이터베이스 디자인 단계의 순서가 옳은 것은?  ㉠ 데이터베이스의 목적을 정의 ㉡ 데이터베이스에서 필요한 테이블을 정의 ㉢ 테이블에서 필요한 필드를 정의 ㉣ 테이블 간의 관계를 정의",
+    "code": "",
+    "lang": "",
     "choices": [
       "㉠ → ㉡ → ㉢ → ㉣",
       "㉠ → ㉢ → ㉡ → ㉣",
@@ -1377,6 +1614,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 DBMS의 장점이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "전산화 비용의 감소",
       "데이터의 일괄성 유지",
@@ -1388,6 +1627,8 @@
   {
     "source": "시나공 3회",
     "q": "프로토콜의 계층 구성은 네트워크 구조에 따라 어떻게 구 분하는가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "구문 계층과 의미 계층",
       "비트 계층과 블록 계층",
@@ -1399,6 +1640,8 @@
   {
     "source": "시나공 3회",
     "q": "가장 널리 사용되며, 2차원적인 표(Table)를 이용하여 데이 터의 상호관계를 정의하는 DB 구조는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "객체 지향형 데이터베이스",
       "계층형 데이터베이스",
@@ -1410,6 +1653,8 @@
   {
     "source": "시나공 3회",
     "q": "데이터베이스 설계 단계 중 저장 레코드 양식 설계, 레코드  집중의 분석 및 설계, 접근 경로 설계와 관계되는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "논리적 설계",
       "요구 조건 분석",
@@ -1421,6 +1666,8 @@
   {
     "source": "시나공 3회",
     "q": "양방향에서 입ㆍ출력이 가능한 선형 자료 구조로 2개의 포 인터를 이용하여 리스트의 양쪽 끝 모두에서 삽입과 삭제가 가 능한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Stack",
       "Queue",
@@ -1432,6 +1679,8 @@
   {
     "source": "시나공 3회",
     "q": "TCP 프로토콜과 관련한 설명으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "인접한 노드 사이의 프레임 전송 및 오류를 제어한다.",
       "흐름 제어(Flow Control)의 기능을 수행한다.",
@@ -1443,6 +1692,8 @@
   {
     "source": "시나공 3회",
     "q": "IPv6의 주소는 몇 비트로 이루어져 있나?",
+    "code": "",
+    "lang": "",
     "choices": [
       "16비트",
       "32비트",
@@ -1454,6 +1705,8 @@
   {
     "source": "시나공 3회",
     "q": "분할 정복(Divide and Conquer)에 기반한 알고리즘으로  피봇(pivot)을 사용하며 최악의 경우 n(n-1)/2회의 비교를 수행 해야 하는 정렬(Sort)은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Selection Sort",
       "Bubble Sort",
@@ -1465,6 +1718,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 트리를 후위 순회(Post Traversal)한 결과는?  A B D E F C",
+    "code": "",
+    "lang": "",
     "choices": [
       "A B D C E F",
       "D B A E C F",
@@ -1476,6 +1731,8 @@
   {
     "source": "시나공 3회",
     "q": "송신측에서 정보의 정확한 전송을 위해서 전송할 데이터의  앞 부분과 뒷 부분에 헤더(Header)와 트레일러(Trailer)를 첨가 하는 과정은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "정보의 캡슐화",
       "연결 제어",
@@ -1487,6 +1744,8 @@
   {
     "source": "시나공 3회",
     "q": "OSI 7계층 모델에서 안전한 전송을 위해 송신측과 수신측 에 논리적인 연결 통로를 만들고, 수신측에서 정상적인 패킷 전 달과 수신을 검사하는 기능을 수행하는 계층은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "물리 계층",
       "전송 계층",
@@ -1498,6 +1757,8 @@
   {
     "source": "시나공 3회",
     "q": "관계 데이터 모델에서 릴레이션(Relation)에 관한 설명으로  옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "릴레이션의 각 행을 스키마(Schema)라 하며, 예로 도서 릴레 이션을 구성하는 스키마에는 도서번호, 도서명, 저자, 가격  등이 있다.",
       "릴레이션의 각 열을 튜플(Tuple)이라 하며, 하나의 튜플은 각  속성에서 정의된 값을 이용하여 구성된다.",
@@ -1509,6 +1770,8 @@
   {
     "source": "시나공 3회",
     "q": "트랜잭션의 특성을 모두 나열한 것은?  ㉠ Atomicity\t ㉡ Durability ㉢ Transparency\t ㉣ Portability ㉤ Consistency\t ㉥ Isolation",
+    "code": "",
+    "lang": "",
     "choices": [
       "㉠, ㉡",
       "㉠, ㉡, ㉥",
@@ -1520,6 +1783,8 @@
   {
     "source": "시나공 3회",
     "q": "데이터베이스에서 사용되는 키(Key)의 종류에 대한 설명으 로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "후보키는 개체들을 고유하게 식별할 수 있는 속성이다.",
       "슈퍼키는 한 개 이상의 속성들의 집합으로 구성된 키이다.",
@@ -1531,6 +1796,8 @@
   {
     "source": "시나공 3회",
     "q": "특정 필드의 검색 결과를 순서대로 출력하기 위한 SQL절 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "GROUP BY",
       "HAVING",
@@ -1542,6 +1809,8 @@
   {
     "source": "시나공 3회",
     "q": "[상반기진급] 테이블과 [하반기진급] 테이블은 모두 ‘사번’,  ‘이름’, ‘부서’ 필드로 구성되어 있다. 다음 중 두 테이블의 레코 드를 통합하려고 할 때 쿼리문으로 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Select 사번, 이름, 부서 From 상반기진급, 하반기진급  Where 상반기진급.사번 = 하반기진급.사번;",
       "Select 사번, 이름, 부서 From 상반기진급 JOIN Select 사번,  이름, 부서 From 하반기진급;",
@@ -1552,7 +1821,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "다음 SQL문의 실행 결과는?  SELECT 가격 FROM 도서가격 WHERE 책번호 ＝ (SELECT 책번호 FROM 도서 WHERE 책명 = ‘자 료구조’);          [도서]        [도서가격] 책번호 책명 책번호 가격 111 운영체제 111 20,000 222 자료구조 222 25,000 333 컴퓨터구조 333 10,000 444 15,000",
+    "q": "다음 SQL문의 실행 결과는?",
+    "code": "SELECT 가격\nFROM 도서가격\nWHERE 책번호 ＝ (SELECT 책번호\nFROM 도서\nWHERE 책명 = ‘자 료구조’);          [도서]        [도서가격] 책번호 책명 책번호 가격 111 운영체제 111 20,000 222 자료구조 222 25,000 333 컴퓨터구조 333 10,000 444 15,000",
+    "lang": "sql",
     "choices": [
       "10,000",
       "15,000",
@@ -1563,7 +1834,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "다음은 SELECT문의 기본 구문이다. 괄호에 들어갈 알맞은  예약어는?  SELECT 학과명 (           ) 학생 WHERE 총점 > 80;",
+    "q": "다음은 SELECT문의 기본 구문이다. 괄호에 들어갈 알맞은  예약어는?",
+    "code": "SELECT 학과명 (           ) 학생\nWHERE 총점 > 80;",
+    "lang": "sql",
     "choices": [
       "GROUP BY",
       "FROM",
@@ -1574,7 +1847,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "SQL 명령문의 의미로 가장 적절한 것은?  DROP TABLE 학과 CASCADE;",
+    "q": "SQL 명령문의 의미로 가장 적절한 것은?",
+    "code": "DROP TABLE 학과 CASCADE;",
+    "lang": "sql",
     "choices": [
       "학과 테이블을 제거하시오.",
       "학과 필드를 제거하시오.",
@@ -1586,6 +1861,8 @@
   {
     "source": "시나공 3회",
     "q": "트랜잭션의 실행이 실패하였음을 알리는 연산자로 트랜잭 션이 수행한 결과를 원래의 상태로 원상 복귀 시키는 연산은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "COMMIT 연산",
       "BACKUP 연산",
@@ -1597,6 +1874,8 @@
   {
     "source": "시나공 3회",
     "q": "SQL문에서 SELECT에 대한 설명으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "FROM절에는 질의에 의해 검색될 데이터들을 포함하는 테이 블명을 기술한다.",
       "검색 결과에 중복되는 레코드를 없애기 위해서는 WHERE절 에 ‘DISTINCT’ 키워드를 사용한다.",
@@ -1608,6 +1887,8 @@
   {
     "source": "시나공 3회",
     "q": "SQL문의 형식 중 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "INSERT ~ INTO ~ VALUES",
       "UPDATE ~ SET ~ WHERE",
@@ -1619,6 +1900,8 @@
   {
     "source": "시나공 3회",
     "q": "테이블을 생성한 후 필드 수정을 위해 사용하는 SQL 명령 어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DROP",
       "CREATE",
@@ -1630,6 +1913,8 @@
   {
     "source": "시나공 3회",
     "q": "판매 테이블에서 품명이 ‘카메라’인 항목을 삭제하는 SQL 문은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DELETE FROM 판매 WHERE 품명 = ‘카메라’;",
       "DELETE FROM 품명 = ‘카메라’ WHERE 판매;",
@@ -1640,7 +1925,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "다음 SQL문에서 사용된 BETWEEN 연산의 의미와 동일한  것은?  SELECT * FROM 성적 WHERE (점수 BETWEEN 90 AND 95) AND 학과 = ‘컴퓨터공학과’;",
+    "q": "다음 SQL문에서 사용된 BETWEEN 연산의 의미와 동일한  것은?",
+    "code": "SELECT *\nFROM 성적\nWHERE (점수 BETWEEN 90 AND 95) AND 학과 = ‘컴퓨터공학과’;",
+    "lang": "sql",
     "choices": [
       "점수 ＞= 90 AND 점수 ＜= 95",
       "점수 ＞ 90 AND 점수 ＜ 95",
@@ -1652,6 +1939,8 @@
   {
     "source": "시나공 3회",
     "q": "기본 테이블에 있는 튜플들 중에서 특정 튜플의 내용을 변 경시킬 때 사용하는 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "UPDATE",
       "INSERT",
@@ -1662,7 +1951,9 @@
   },
   {
     "source": "시나공 3회",
-    "q": "STUDENT 테이블에 독일어과 학생 50명, 중국어과 학생 30 명, 영어영문학과 학생 50명의 정보가 저장되어 있을 때, 다음  두 SQL문의 실행 결과 튜플 수는? (단, DEPT 컬럼은 학과명)?  ㉠ SELECT DEPT FROM STUDENT; ㉡ SELECT DISTINCT DEPT FROM STUDENT;",
+    "q": "STUDENT 테이블에 독일어과 학생 50명, 중국어과 학생 30 명, 영어영문학과 학생 50명의 정보가 저장되어 있을 때, 다음  두 SQL문의 실행 결과 튜플 수는? (단, DEPT 컬럼은 학과명)?  ㉠",
+    "code": "SELECT DEPT\nFROM STUDENT; ㉡\nSELECT DISTINCT DEPT\nFROM STUDENT;",
+    "lang": "sql",
     "choices": [
       "㉠ 3, ㉡ 3",
       "㉠ 50, ㉡ 3",
@@ -1674,6 +1965,8 @@
   {
     "source": "시나공 3회",
     "q": "SQL 명령을 사용 용도에 따라 구분할 경우, 다음 중 성격 이 나머지 셋과 다른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CREATE",
       "ALTER",
@@ -1685,6 +1978,8 @@
   {
     "source": "시나공 3회",
     "q": "데이터 제어어(DCL)에 대한 설명으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ROLLBACK : 데이터의 보안과 무결성을 정의한다.",
       "COMMIT : 데이터베이스 사용자의 사용 권한을 취소한다.",
@@ -1696,6 +1991,8 @@
   {
     "source": "시나공 3회",
     "q": "CPU에 의해 처리되는 사용자 프로그램, 즉 실행중인 프로 그램을 의미하며, 작업(Job) 또는 태스크(Task)라고도 하는 것 은 무엇인가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "인터럽트",
       "프로세스",
@@ -1707,6 +2004,8 @@
   {
     "source": "시나공 3회",
     "q": "단위 테스트(Unit Test)에 대한 설명으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "개발한 소프트웨어가 사용자의 요구사항을 충족하는지에 중 점을 두고 테스트하는 것이다.",
       "개별 모듈을 시험하는 것으로 모듈이 정확하게 구현되었는지,  예정한 기능이 제대로 수행되는지를 점검하는 테스트이다.",
@@ -1718,6 +2017,8 @@
   {
     "source": "시나공 3회",
     "q": "다음은 프로세스 스케줄링에 대한 설명이다. 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SRT는 가장 긴 실행 시간을 요구하는 프로세스에게 CPU를  할당하는 기법이다.",
       "우선순위는 각 프로세스마다 우선순위를 부여하여 그 중 가장  낮은 프로세스에게 먼저 CPU를 할당하는 기법이다.",
@@ -1729,6 +2030,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 복구 목표 시간(RTO)이 가장 짧은 복원 방식은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "콜드 사이트",
       "웜 사이트",
@@ -1740,6 +2043,8 @@
   {
     "source": "시나공 3회",
     "q": "UNIX에서 앞의 출력 결과가 뒤에 실행하는 명령의 입력이  되는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "pipe",
       "more",
@@ -1751,6 +2056,8 @@
   {
     "source": "시나공 3회",
     "q": "도스(MS-DOS)에서 내부 명령어에 해당하지 않는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DEL",
       "DIR",
@@ -1762,6 +2069,8 @@
   {
     "source": "시나공 3회",
     "q": "소프트웨어 개발 영역을 결정하는 요소 중 다음 사항과 관 계있는 것은?  •소프트웨어에 의해 간접적으로 제어되는 장치와 소프트웨어를 실행 하는 하드웨어 •기존의 소프트웨어와 새로운 소프트웨어를 연결하는 소프트웨어 •순서적 연산에 의해 소프트웨어를 실행하는 절차",
+    "code": "",
+    "lang": "",
     "choices": [
       "기능(Function)",
       "성능(Performance)",
@@ -1773,6 +2082,8 @@
   {
     "source": "시나공 3회",
     "q": "DOS에서 디렉터리(Directory) 내의 파일이나 하위 디렉터 리가 있는 디렉터리를 삭제하는 명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DEL",
       "RD",
@@ -1784,6 +2095,8 @@
   {
     "source": "시나공 3회",
     "q": "다음은 컴퓨터에서 프로그램 언어의 처리 과정을 나타내고  있다. (   ) 안에 들어갈 과정을 차례로 나열한 것은?  컴파일러 → (    ) → (    ) → 실행",
+    "code": "",
+    "lang": "",
     "choices": [
       "링킹(Linking) → 로딩(Loading)",
       "로딩(Loading) → 링킹(Linking)",
@@ -1795,6 +2108,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 클라우드 백업의 특징으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "초기 투자 비용이 적다.",
       "인터넷을 통해 데이터를 백업한다.",
@@ -1806,6 +2121,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 중 지속적인 통합(CI; Continuous Integration)의 주요  목적은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "코드 변경 사항을 버그 리포트에 자동으로 기록하는 것이다.",
       "개발자가 작성한 코드를 중앙 저장소에 자주 통합하고, 자동  빌드 및 테스트를 통해 오류를 빠르게 발견하는 것이다.",
@@ -1817,6 +2134,8 @@
   {
     "source": "시나공 3회",
     "q": "화이트박스 테스트의 유형이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "기초 경로 검사",
       "경계값 분석",
@@ -1828,6 +2147,8 @@
   {
     "source": "시나공 3회",
     "q": "다음 애플리케이션 테스트에 대한 설명에서 ㉠, ㉡에 들어 갈 알맞은 용어로 나열된 것은?  •(  ㉠  ) : 사용자의 입장에서 개발한 소프트웨어가 고객의 요구사항 에 맞게 구현되었는지를 확인하는 것이다. •(  ㉠  ) : 개발자의 입장에서 개발한 소프트웨어가 명세서에 맞게 만 들어졌는지를 점검하는 것이다.",
+    "code": "",
+    "lang": "",
     "choices": [
       "㉠ Validation, ㉡ Verification",
       "㉠ Verification, ㉡ Validation",
@@ -1839,6 +2160,8 @@
   {
     "source": "시나공 3회",
     "q": "운영체제(OS)에 대한 설명으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "OS는 컴퓨터와 사용자 간의 중간자 역할을 한다.",
       "OS는 H/W 및 주변장치를 관리하는 역할을 한다.",
@@ -1849,7 +2172,9 @@
   },
   {
     "source": "시나공 4회",
-    "q": "다음 중 JAVA 코드의 실행 결과로 올바른 것은?  public class Main {     public static void main(String[ ] args) {         int a = 10;         int b = 5;         a += b;         System.out.println(a);     } }",
+    "q": "다음 중 JAVA 코드의 실행 결과로 올바른 것은?",
+    "code": "public class Main  {\n    public static void main(String[ ] args)  {\n        int a = 10;\n        int b = 5;\n        a += b;\n        System.out.println(a);\n    }\n}",
+    "lang": "java",
     "choices": [
       "5",
       "10",
@@ -1860,7 +2185,9 @@
   },
   {
     "source": "시나공 4회",
-    "q": "다음 중 JAVA에서 System.out.println( )을 사용하여 출력했 을 때, 결과가 1020이 되는 코드는?",
+    "q": "다음 중 JAVA에서",
+    "code": "System.out.println( )을 사용하여 출력했 을 때, 결과가 1020이 되는 코드는?",
+    "lang": "java",
     "choices": [
       "System.out.println(10 + 20);",
       "System.out.println(“10” + “20”);",
@@ -1872,6 +2199,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 구조적 프로그래밍의 특징에 대한 설명으로 가장 거 리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "복잡성을 줄이고 읽기 쉬운 코드를 작성할 수 있다.",
       "GOTO문을 사용하여 프로그램의 효율성을 높인다.",
@@ -1883,6 +2212,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 캡슐화(Encapsulation)에 대한 설명으로 가장 올바 른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "객체의 세부 내용이 외부에 은폐(정보 은닉)되어 오류의 파급  효과가 적다.",
       "불필요한 부분을 생략하고 가장 중요한 것에 중점을 두어 모 델화하는 것이다.",
@@ -1894,6 +2225,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 서버용 스크립트 언어인 ASP에 대한 설명으로 옳 은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "모든 운영체제에서 사용 가능한 언어이다.",
       "C, Java와 문법이 유사하여 배우기 쉽다.",
@@ -1905,6 +2238,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 Python의 시퀀스 자료형에 대한 설명으로 옳은 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "리스트(List)는 값이 연속적으로 저장되지만, 값의 추가나 삭 제가 불가능하다.",
       "튜플(Tuple)은 리스트와 달리 필요에 따라 개수를 늘리거나  줄일 수 있다.",
@@ -1916,6 +2251,8 @@
   {
     "source": "시나공 4회",
     "q": "변수 선언 시 변수명에 데이터 타입을 명시하는 표기법으로,  변수의 자료형을 쉽게 알 수 있도록 하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "헝가리안 표기법",
       "카멜 케이스 표기법",
@@ -1927,6 +2264,8 @@
   {
     "source": "시나공 4회",
     "q": "릴레이션에 있는 모든 튜플에 대해 유일성은 만족시키지만  최소성은 만족시키지 못하는 키는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "후보키",
       "기본키",
@@ -1938,6 +2277,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 전송 계층 프로토콜에 해당하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "UDP",
       "FTP",
@@ -1949,6 +2290,8 @@
   {
     "source": "시나공 4회",
     "q": "이진 트리의 레코드 R = (90, 85, 70, 65, 60, 55, 50, 45,  40, 35, 25)에 대하여 힙(Heap) 정렬을 만들 때, 70의 왼쪽과  오른쪽의 자노드(Child Node)의 값은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "45, 40",
       "65, 60",
@@ -1960,6 +2303,8 @@
   {
     "source": "시나공 4회",
     "q": "다음은 SQL문의 기본 형식이다. ㉠에 들어갈 알맞은 명령 어는 무엇인가?  SELECT [DISTINCT] 필드이름  (  ㉠  ) 테이블이름 [WHERE 조건식];",
+    "code": "",
+    "lang": "",
     "choices": [
       "ORDER",
       "HAVING",
@@ -1970,7 +2315,9 @@
   },
   {
     "source": "시나공 4회",
-    "q": "다음 SQL 명령의 의미는?  SELECT 성명 FROM 학급;",
+    "q": "다음 SQL 명령의 의미는?",
+    "code": "SELECT 성명\nFROM 학급;",
+    "lang": "sql",
     "choices": [
       "성명 테이블에서 학급을 검색한다.",
       "학급 테이블에서 성명을 검색한다.",
@@ -1982,6 +2329,8 @@
   {
     "source": "시나공 4회",
     "q": "SQL의 명령은 사용 용도에 따라 DDL, DML, DCL로 구분 할 수 있다. 다음 명령 중 그 성격이 나머지 셋과 다른 하나는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT",
       "CREATE",
@@ -1993,6 +2342,8 @@
   {
     "source": "시나공 4회",
     "q": "기본 테이블 R을 이용하여 뷰 V1을 정의하고, 뷰 V1을 이 용하여 다시 뷰 V2가 정의되었다. 그리고 기본 테이블 R과 뷰  V2를 조인하여 뷰 V3를 정의하였다. 이때 다음과 같은 SQL문 이 실행되면 어떤 결과가 발생하는지 올바르게 설명한 것은?  DROP VIEW V1 RESTRICT;",
+    "code": "",
+    "lang": "",
     "choices": [
       "V1만 삭제된다.",
       "R, V1, V2, V3 모두 삭제된다.",
@@ -2004,6 +2355,8 @@
   {
     "source": "시나공 4회",
     "q": "SQL문에서 STUDENT(SNO, SNAME, YEAR, DEPT) 테이 블에 학번 600, 성명 홍길동, 학년 2학년인 학생 튜플을 삽입하 는 명령으로 옳은 것은? (단, SNO는 학번, SNAME은 성명,  YEAR는 학년, DEPT는 학생, 교수 구분 필드임)",
+    "code": "",
+    "lang": "",
     "choices": [
       "INSERT STUDENT INTO VALUES (600, ‘홍길동’, 2);",
       "INSERT FROM STUDENT VALUES (600, ‘홍길동’, 2);",
@@ -2014,7 +2367,9 @@
   },
   {
     "source": "시나공 4회",
-    "q": "다음 SQL문의 의미로 적합한 것은?  SELECT * FROM 사원;",
+    "q": "다음 SQL문의 의미로 적합한 것은?",
+    "code": "SELECT *\nFROM 사원;",
+    "lang": "sql",
     "choices": [
       "사원 테이블을 삭제한다.",
       "사원 테이블에서 전체 레코드의 모든 필드를 검색한다.",
@@ -2026,6 +2381,8 @@
   {
     "source": "시나공 4회",
     "q": "UNIX에서 시스템 내에 동작중인 프로세스 관련 정보를 표 시하는 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ps",
       "cd",
@@ -2037,6 +2394,8 @@
   {
     "source": "시나공 4회",
     "q": "다음 중 운영체제가 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "윈도우",
       "유닉스",
@@ -2048,6 +2407,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 JAVA에서 printf 메소드를 사용하여 정수형 변수  num에 저장된 값을 16진수로 출력하기 위해 사용해야 하는 서 식 문자열은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "%d",
       "%o",
@@ -2059,6 +2420,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 구조적 프로그래밍에서 사용하는 세 가지 기본 제어  구조에 해당하지 않는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "순차(Sequence) 구조",
       "선택(Selection) 구조",
@@ -2070,6 +2433,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 추상화(Abstraction)의 개념에 해당하는 설명으로  가장 적합한 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "이미 정의된 클래스의 기능을 하위 클래스가 물려받아 재사용 하는 것이다.",
       "객체의 데이터를 외부에서 직접 접근할 수 없도록 숨기는 것 이다.",
@@ -2081,6 +2446,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 리눅스/유닉스 계열의 셸에서 사용되며, 확장자가  ‘.sh’인 스크립트 언어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "파이썬",
       "쉘 스크립트",
@@ -2092,6 +2459,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 변수명을 작성할 때의 규칙으로 올바른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "첫 글자에 숫자를 사용할 수 있다.",
       "공백이나 특수문자 +, - 등을 포함할 수 있다.",
@@ -2102,29 +2471,9 @@
   },
   {
     "source": "시나공 5회",
-    "q": "다음 중 JAVA 코드의 실행 결과는?  class Test {     public static void main(String args[ ]) {         cond obj = new cond(3);         obj.a = 5;         int b = obj.func( );         System.out.print(obj.a + b);     } } class cond {     int a;     public cond(int a) {         this.a = a;     }     public int func( ) {         int b = 1;         for (int i = 1; i < a; i++)             b += a * i;         return a + b;     } }",
-    "choices": [
-      "60",
-      "61",
-      "62",
-      "63"
-    ],
-    "answer": 1
-  },
-  {
-    "source": "시나공 5회",
-    "q": "다음 파이썬(Python) 코드의 실행 결과는?  sentence = “python programming is fun” result = sentence.replace(“fun”, “easy”).split( ) print(result)",
-    "choices": [
-      "[‘python’, ‘programming’, ‘is’, ‘easy’]",
-      "[‘python’, ‘programming’, ‘is’, ‘fun’]",
-      "python programming is easy",
-      "python programming is fun"
-    ],
-    "answer": 0
-  },
-  {
-    "source": "시나공 5회",
     "q": "다음 중 HTML의 프레임 태그와 기능에 대한 설명으로 옳 지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "<frameset>은 화면을 여러 개의 프레임으로 분할할 때 사용 한다.",
       "<frame>은 분할된 프레임에 HTML 문서를 삽입할 때 사용한다.",
@@ -2136,6 +2485,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 JavaScript의 대화상자 관련 함수에 대한 설명으로  옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "화면에 대화상자가 표시되어 있어도 웹 페이지 조작이 가능하다.",
       "alert( )는 사용자로부터 값을 입력받는다.",
@@ -2147,6 +2498,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 JAVA의 예외 객체와 예외 발생 원인이 올바르게  연결된 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "ArithmeticException - 배열 범위를 벗어난 경우",
       "InterruptedIOException - 0으로 나누는 등의 산술 연산에  대한 예외가 발생한 경우",
@@ -2158,6 +2511,8 @@
   {
     "source": "시나공 5회",
     "q": "OSI 7계층 중 다음과 같은 특징을 갖는 계층은 무엇인가?  •\u0007개방 시스템들 간의 네트워크 연결을 관리하는 기능과 데이터의 교 환 및 중계 기능을 한다. •데이터의 안전한 전송을 위해 논리적 링크(가상 회로)를 설정한다.",
+    "code": "",
+    "lang": "",
     "choices": [
       "물리 계층",
       "데이터 링크 계층",
@@ -2169,6 +2524,8 @@
   {
     "source": "시나공 5회",
     "q": "데이터 통신에서 정보의 전송을 수행하는 두 개의 컴퓨터  시스템 사이에서 상호 간에 전달되는 정보의 형식, 정보 교환을  위하여 사용되는 제어 정보의 의미와 전달 방식 등과 같은 정 보 교환을 위하여 사용되는 규칙을 의미하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "통신 절차",
       "전송 제어",
@@ -2180,6 +2537,8 @@
   {
     "source": "시나공 5회",
     "q": "데이터베이스의 설계 단계를 순서적으로 바르게 기술한 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "개념적 설계 → 물리적 설계 → 논리적 설계 → 요구조건 분석  → 구현",
       "요구조건 분석 → 물리적 설계 → 개념적 설계 → 논리적 설계  → 구현",
@@ -2191,6 +2550,8 @@
   {
     "source": "시나공 5회",
     "q": "E-R 모델의 표현 방법으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "개체 타입 : 사각형",
       "관계 타입 : 마름모",
@@ -2202,6 +2563,8 @@
   {
     "source": "시나공 5회",
     "q": "TCP/IP 기반 네트워크에서 동작하는 발행-구독 기반의 메 시징 프로토콜로 최근 IoT 환경에서 자주 사용되고 있는 프로 토콜은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "MLFQ",
       "MQTT",
@@ -2213,6 +2576,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 그림에서 트리의 차수는?  A B D E G H F C",
+    "code": "",
+    "lang": "",
     "choices": [
       "1",
       "2",
@@ -2224,6 +2589,8 @@
   {
     "source": "시나공 5회",
     "q": "분산된 터미널 또는 여러 컴퓨터들이 중앙의 호스트 컴퓨 터와 집중 연결되어 있는 정보통신망의 구성 형태는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "루프형",
       "스타형",
@@ -2235,6 +2602,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 기본키는 NULL 값을 가져서는 안되며, 릴레이션  내에 오직 하나의 값만 존재해야 한다는 조건을 무엇이라 하는 가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "개체 무결성 제약조건",
       "참조 무결성 제약조건",
@@ -2246,6 +2615,8 @@
   {
     "source": "시나공 5회",
     "q": "다음과 같이 레코드가 구성되어 있을 때, 이진 검색 방법으 로 F를 찾을 경우 비교되는 횟수는?  A B C D E F G H I J K L M N",
+    "code": "",
+    "lang": "",
     "choices": [
       "4",
       "5",
@@ -2257,6 +2628,8 @@
   {
     "source": "시나공 5회",
     "q": "스택에서 순서가 A, B, C, D로 정해진 입력 자료를, push  → push → pop → push → push → pop → pop → pop으로  연산 했을 때 출력은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "C, B, D, A",
       "B, C, D, A",
@@ -2268,6 +2641,8 @@
   {
     "source": "시나공 5회",
     "q": "데이터베이스 테이블의 기본키(Primary Key) 로 가장 부적 합한 항목은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "차량 등록번호",
       "사원번호",
@@ -2279,6 +2654,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 릴레이션의 Degree와 Cardinality는?  학번 이름 학년 학과 25001 최시아 2학년 건축 25002 한상범 3학년 화학 25003 유명인 2학년 토목",
+    "code": "",
+    "lang": "",
     "choices": [
       "Degree : 3, Cardinality : 12",
       "Degree : 12, Cardinality : 3",
@@ -2290,6 +2667,8 @@
   {
     "source": "시나공 5회",
     "q": "사용자와 데이터베이스 사이에 위치하여 데이터베이스를  관리하고, 사용자의 요구에 따라 정보를 생성해 주는 소프트웨 어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "컴파일러",
       "운영체제",
@@ -2301,6 +2680,8 @@
   {
     "source": "시나공 5회",
     "q": "삽입 정렬을 사용하여 다음의 자료를 오름차순으로 정렬하 고자 한다. 2회전 후의 결과는?  5, 4, 3, 2, 1",
+    "code": "",
+    "lang": "",
     "choices": [
       "4, 5, 3, 2, 1",
       "2, 3, 4, 5, 1",
@@ -2312,6 +2693,8 @@
   {
     "source": "시나공 5회",
     "q": "IEEE 802.3 LAN에서 사용되는 전송 매체 접속 제어(MAC)  방식은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CSMA/CD",
       "Token Bus",
@@ -2323,6 +2706,8 @@
   {
     "source": "시나공 5회",
     "q": "학적 테이블에서 전화번호가 Null 값이 아닌 학생명을 모두  검색할 때, SQL 구문으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT 학생명 FROM 학적 WHERE 전화번호 DON’T  NULL;",
       "SELECT 학생명 FROM 학적 WHERE 전화번호 != NOT  NULL;",
@@ -2334,6 +2719,8 @@
   {
     "source": "시나공 5회",
     "q": "테이블 두 개를 조인하여 뷰 V_1을 정의하고, V_1을 이용 하여 뷰 V_2를 정의하였다. 다음 명령 수행 후 결과로 옳은 것 은?  DROP VIEW V_1 CASCADE;",
+    "code": "",
+    "lang": "",
     "choices": [
       "V_1만 삭제된다.",
       "V_2만 삭제된다.",
@@ -2345,6 +2732,8 @@
   {
     "source": "시나공 5회",
     "q": "‘회원’ 테이블 생성 후 ‘주소’ 필드(컬럼)가 누락되어 이를  추가하려고 한다. 이에 적합한 SQL 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DELETE",
       "RESTORE",
@@ -2356,6 +2745,8 @@
   {
     "source": "시나공 5회",
     "q": "SQL에서 테이블의 price 열을 기준으로 오름차순 정렬하 고자 할 경우 사용되는 명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SORT BY price ASC",
       "SORT BY price DESC",
@@ -2367,6 +2758,8 @@
   {
     "source": "시나공 5회",
     "q": "SQL에서 조건문을 기술할 수 있는 구문은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "LIKE",
       "WHERE",
@@ -2378,6 +2771,8 @@
   {
     "source": "시나공 5회",
     "q": "SQL 구문 형식으로 옳지 않은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT ~ FROM ~ WHERE",
       "DELETE ~ FROM ~ WHERE",
@@ -2389,6 +2784,8 @@
   {
     "source": "시나공 5회",
     "q": "DELETE 명령에 대한 설명으로 틀린 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "테이블의 행을 삭제할 때 사용한다.",
       "WHERE 조건절이 없는 DELETE 명령을 수행하면 DROP  TABLE 명령을 수행했을 때와 동일한 효과를 얻을 수 있다.",
@@ -2400,6 +2797,8 @@
   {
     "source": "시나공 5회",
     "q": "학생 테이블에서 학번이 “1144077”인 학생의 학년을 “2”로  수정하기 위한 SQL 질의어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "UPDATE 학년 = “2” FROM 학생 WHERE 학번 =  “1144077”;",
       "UPDATE 학생 SET 학년 = “2” WHERE 학번 = “1144077”;",
@@ -2410,7 +2809,9 @@
   },
   {
     "source": "시나공 5회",
-    "q": "CREATE TABLE 명령을 이용해 테이블을 정의할 때 참조  테이블의 튜플이 삭제되더라도 기본 테이블의 튜플은 삭제되 지 않도록 지정하는 옵션으로 옳은 것은?",
+    "q": "",
+    "code": "CREATE TABLE 명령을 이용해 테이블을 정의할 때 참조  테이블의 튜플이 삭제되더라도 기본 테이블의 튜플은 삭제되 지 않도록 지정하는 옵션으로 옳은 것은?",
+    "lang": "sql",
     "choices": [
       "ON DELETE CASCASE",
       "ON DELETE SET NULL",
@@ -2421,7 +2822,9 @@
   },
   {
     "source": "시나공 5회",
-    "q": "SQL문 ‘SELECT * FROM INSA;’에서 “*”의 의미는?",
+    "q": "SQL문 ‘",
+    "code": "SELECT *\nFROM INSA;’에서 “*”의 의미는?",
+    "lang": "sql",
     "choices": [
       "모든 열을 검색하라.",
       "INSA 테이블의 기본키 열을 검색하라.",
@@ -2433,6 +2836,8 @@
   {
     "source": "시나공 5회",
     "q": "SQL 구문에서 “having” 절은 반드시 어떤 구문과 사용되 어야 하는가?",
+    "code": "",
+    "lang": "",
     "choices": [
       "GROUP BY",
       "ORDER BY",
@@ -2443,7 +2848,9 @@
   },
   {
     "source": "시나공 5회",
-    "q": "다음 SQL 검색문의 의미로 가장 적절한 것은?  SELECT DISTINCT 제품명 FROM 제품;",
+    "q": "다음 SQL 검색문의 의미로 가장 적절한 것은?",
+    "code": "SELECT DISTINCT 제품명\nFROM 제품;",
+    "lang": "sql",
     "choices": [
       "제품 테이블의 제품명을 모두 검색하라.",
       "제품 테이블의 제품명을 중복되지 않게 모두 검색하라.",
@@ -2455,6 +2862,8 @@
   {
     "source": "시나공 5회",
     "q": "데이터 제어어(DCL)의 역할이 아닌 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "불법적인 사용자로부터 데이터를 보호하기 위한 데이터 보안 (Security)",
       "데이터 정확성을 위한 무결성(Integrity) 유지",
@@ -2465,7 +2874,9 @@
   },
   {
     "source": "시나공 5회",
-    "q": "다음 SQL의 실행 결과로 옳은 것은?  <거래내역>  상호 금액 대명금속 255,000 정금강업 900,000 효신산업 600,000 율촌화학 220,000 한국제지 200,000 한국화이바 795.000 <SQL>  SELECT 상호 FROM 거래내역 WHERE 금액 In (SELECT MAX(금액)  FROM 거래내역);",
+    "q": "다음 SQL의 실행 결과로 옳은 것은?  <거래내역>  상호 금액 대명금속 255,000 정금강업 900,000 효신산업 600,000 율촌화학 220,000 한국제지 200,000 한국화이바 795.000 <SQL>",
+    "code": "SELECT 상호\nFROM 거래내역\nWHERE 금액 In (SELECT MAX(금액)\nFROM 거래내역);",
+    "lang": "sql",
     "choices": [
       "대명금속",
       "정금강업",
@@ -2477,6 +2888,8 @@
   {
     "source": "시나공 5회",
     "q": "SQL의 명령을 사용 용도에 따라 DDL, DML, DCL로 구분 할 경우, 그 성격이 나머지 셋과 다른 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "SELECT",
       "UPDATE",
@@ -2488,6 +2901,8 @@
   {
     "source": "시나공 5회",
     "q": "UNIX에서 현재의 작업 디렉터리가 어디인지를 확인하는  명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "pwd",
       "rmdir",
@@ -2499,6 +2914,8 @@
   {
     "source": "시나공 5회",
     "q": "UNIX에서 프로세스 관리, 기억장치 관리, 파일 관리, 입· 출력 관리, 데이터 전송 및 변환 등의 일을 수행하는 부분은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Shell",
       "Application Program",
@@ -2510,6 +2927,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 조건을 이용하여 시스템 디스크 용량을 계산했을 때  결과값은?  •시스템 OS 영역 : 100GB •응용 프로그램 영역 : 50GB •SWAP 영역 : 15GB •파일 시스템 오버헤드 : 1.1 •시스템 디스크 여유율 : 1.2 •RAID 여유율 : 1.5 (RAID-5 기준)",
+    "code": "",
+    "lang": "",
     "choices": [
       "312.6GB",
       "322.8GB",
@@ -2521,6 +2940,8 @@
   {
     "source": "시나공 5회",
     "q": "다중 처리 시스템에서 하나의 프로세서가 CPU를 독점하는  것을 방지하기 위하여 각각 하나의 시간 슬롯을 할당하여 동작 하도록 하는 시스템은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Batch Processing System",
       "Real Time Processing System",
@@ -2532,6 +2953,8 @@
   {
     "source": "시나공 5회",
     "q": "소프트웨어 테스트 순서로 올바르게 나열된 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "단위 테스트 → 인수 테스트 → 통합 테스트 → 시스템 테스트",
       "단위 테스트 → 통합 테스트 → 시스템 테스트 → 인수 테스트",
@@ -2543,6 +2966,8 @@
   {
     "source": "시나공 5회",
     "q": "도스(MS-DOS)에서 디스크의 상태를 점검하는 명령은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "CHKDSK",
       "FORMAT",
@@ -2554,6 +2979,8 @@
   {
     "source": "시나공 5회",
     "q": "User Interface 설계 시 오류 메시지나 경고에 관한 지침으 로 가장 거리가 먼 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "메시지는 이해하기 쉬워야 한다.",
       "오류로부터 회복을 위한 구체적인 설명이 제공되어야 한다.",
@@ -2565,6 +2992,8 @@
   {
     "source": "시나공 5회",
     "q": "운영체제를 구성하는 프로그램 중 제어 프로그램에 해당하 는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "서비스 프로그램",
       "작업 관리 프로그램",
@@ -2576,6 +3005,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 실시간 데이터 동기화가 가능하며, 서버 자원 사용 을 최소화하는 특징을 가진 복원 방식은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "DB 미러링 방식",
       "Log Shipping 방식",
@@ -2587,6 +3018,8 @@
   {
     "source": "시나공 5회",
     "q": "운영체제의 구성 요소 중 프로세서를 생성, 실행, 중단, 소 멸시키는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "스케줄러(Scheduler)",
       "드라이버(Driver)",
@@ -2598,6 +3031,8 @@
   {
     "source": "시나공 5회",
     "q": "컴퓨터 시스템을 구성하고 있는 하드웨어 장치와 일반 사 용자에서 실행되는 응용 프로그램의 중간에 위치하여 컴퓨터  시스템을 제어하고 관리하는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "Operating System",
       "Loader",
@@ -2609,6 +3044,8 @@
   {
     "source": "시나공 5회",
     "q": "다음 중 화이트박스 테스트에 대한 설명으로 옳지 않은 것 은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "모듈의 논리적 구조를 체계적으로 테스트하는 것으로 구조적  테스트라고도 한다.",
       "프로그램에서 수행되는 기능에 초점을 가지고 테스트하기 때 문에 실제 프로그램의 내부 구조는 다루지 않는다.",
@@ -2620,6 +3057,8 @@
   {
     "source": "시나공 5회",
     "q": "도스(MS-DOS)에서 특정한 디렉터리 내의 모든 파일 및  하부 디렉터리까지 복사해주는 명령어는?",
+    "code": "",
+    "lang": "",
     "choices": [
       "COPY",
       "XCOPY",
@@ -2631,6 +3070,8 @@
   {
     "source": "시나공 5회",
     "q": "Windows 10의 플러그 앤 플레이(Plug & Play) 방식에 대 한 설명으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "주변장치를 장착하면 스스로 장치를 인식하는 방식이다.",
       "동영상과 음향을 동시에 실행하는 방식이다.",
@@ -2642,6 +3083,8 @@
   {
     "source": "시나공 5회",
     "q": "프로세스 스케줄링 방식 중 시분할(Time Sharing) 시스템 에 가장 적절한 방식은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "FIFO",
       "SJF",
@@ -2652,7 +3095,9 @@
   },
   {
     "source": "이기적_예상1",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? s = \"PYTHON\" print(s[-1])",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? s = \"PYTHON\"",
+    "code": "print(s[-1])",
+    "lang": "python",
     "choices": [
       "P",
       "O",
@@ -2664,17 +3109,21 @@
   {
     "source": "이기적_예상1",
     "q": "다음 중 문자열 슬라이싱(string slicing)과 리스트  슬라이싱(list slicing)의 차이점으로 옳은 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "\u0007문자열 슬라이싱은 인덱스를 사용할 수 없고,  리스트 슬라이싱은 사용할 수 있다.",
       "\u0007문자열 슬라이싱 결과는 리스트이고, 리스트  슬라이싱 결과는 문자열이다.",
       "\u0007문자열은 슬라이싱 결과를 수정할 수 없고, 리 스트는 수정할 수 있다.",
-      "\u0007리스트 슬라이싱은 음수 인덱스를 사용할 수  없다. 문자열과 리스트의 슬라이스 문법은 같지만 문자열 슬라이스는 결과를 수 정할 수 없고, 리스트는 수정이 가능하다는 차이가 있다. 즉, 파이썬에서 문 자열(str)은"
+      "\u0007리스트 슬라이싱은 음수 인덱스를 사용할 수  없다. 문자열과 리스트의 슬라이스 문법은 같지만 문자열 슬라이스는 결과를 수 정할 수 없고, 리스트는 수정이 가능하다는 차이가 있다. 즉, 파이썬에서 문 자열(str)은 불변(Immutable) 객체이고, 리스트(list)"
     ],
     "answer": 2
   },
   {
     "source": "이기적_예상1",
     "q": "Python 데이터 타입 중 시퀀스(Sequence) 데이터  타입에 해당하며 다양한 데이터 타입들을 주어진 순 서에 따라 저장할 수는 있으나 저장된 내용을 변경할  수는 없는 것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "복소수(Complex) 타입",
       "리스트(List) 타입",
@@ -2686,6 +3135,8 @@
   {
     "source": "이기적_예상2",
     "q": "다음 중 파이썬 시퀀스(Sequence) 자료형이 아닌  것은?",
+    "code": "",
+    "lang": "",
     "choices": [
       "리스트(list)",
       "튜플(tuple)",
@@ -2696,7 +3147,9 @@
   },
   {
     "source": "이기적_예상2",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? arr1 = [0, 1, 2, 3, 4] print(arr1[1:4])",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? arr1 = [0, 1, 2, 3, 4]",
+    "code": "print(arr1[1:4])",
+    "lang": "python",
     "choices": [
       "[0, 1, 2, 3]",
       "[1, 2, 3]",
@@ -2707,29 +3160,35 @@
   },
   {
     "source": "이기적_예상2",
-    "q": "다음은 파이썬으로 만들어진 반복문 코드이다. 이 코 드의 결과는? while True:     print('A')     print('B')     print('C')     continue     print('D')",
+    "q": "다음은 파이썬으로 만들어진 반복문 코드이다. 이 코 드의 결과는? while True:",
+    "code": "print('A')\nprint('B')\nprint('C')     continue\nprint('D')",
+    "lang": "python",
     "choices": [
       "A, B, C 출력이 반복된다.",
       "A, B, C까지만 출력된다.",
       "A, B, C, D 출력이 반복된다.",
-      "A, B, C, D까지만 출력된다. •continue문을 만나 while True문으로 이동하면서 무한 반복한다. •print('D')은 한 번도 실행되지 않는다. ​02\t다음 파이썬 코드의 실행 결과로 옳은 것은?"
+      "A, B, C, D까지만 출력된다. •continue문을 만나 while True문으로 이동하면서 무한 반복한다. •print('D')은 한 번도 실행되지 않는다. ​02\t다음 파이썬 코드의 실행 결과로 옳은 것은? a = [10, 20, 30, 40, 50] hap "
     ],
     "answer": 0
   },
   {
     "source": "이기적_예상2",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? total_sum = 0 my_list = range(10) for i in my_list:     total_sum += i print(total_sum)",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? total_sum = 0 my_list = range(10) for i in my_list:     total_sum += i",
+    "code": "print(\ntotal_\nsum)",
+    "lang": "python",
     "choices": [
       "10",
       "44",
       "45",
-      "55 •\u0007range(n)은 0부터 n-1까지의 정수를 생성한다. 즉, range(10)은 0~9까 지이다. •for i in my_list: → i는 0부터 9까지 1씩 증가하며 10회 반복한다. •0부터 9까지의 "
+      "55 •\u0007range(n)은 0부터 n-1까지의 정수를 생성한다. 즉, range(10)은 0~9까 지이다. •for i in my_list: → i는 0부터 9까지 1씩 증가하며 10회 반복한다. •0부터 9까지의 합계 계산 : 0 + 1 + 2 + 3 + 4 + 5 "
     ],
     "answer": 2
   },
   {
     "source": "이기적_예상2",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? a = [10, 20, 30, 40, 50] hap = 0 for i in a[-3:]:     hap += i print(hap)",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? a = [10, 20, 30, 40, 50]",
+    "code": "hap = 0\nfor i in a[-3:]:     hap += i\nprint(hap)",
+    "lang": "python",
     "choices": [
       "60",
       "90",
@@ -2740,7 +3199,9 @@
   },
   {
     "source": "이기적_예상4",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? print(“123”, “123”, sep=”hello”)",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은?",
+    "code": "print(“123”, “123”, sep=”hello”)",
+    "lang": "python",
     "choices": [
       "123 123",
       "123hello123",
