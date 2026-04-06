@@ -1,4 +1,4 @@
-import fitz, sys, re, json
+import fitz, sys, re, json, os
 sys.stdout.reconfigure(encoding='utf-8')
 
 # ──────────────────────────────────────────────
@@ -274,7 +274,7 @@ def dedup(qs):
 # 실행
 # ──────────────────────────────────────────────
 if __name__ == '__main__':
-    base = 'c:/Users/3class_013/Desktop/프로그래밍기능사/'
+    base = os.path.dirname(os.path.abspath(__file__)) + '/'
     print('추출 중...', file=sys.stderr)
     qs1 = parse_sinagong(base + '2026시나공_프로그래밍기능사필기_최종점검모의고사.pdf')
     qs2 = parse_ikjeok(base + '2026 이기적 프로그래밍기능사 필기 기본서(기출분석자료).pdf')

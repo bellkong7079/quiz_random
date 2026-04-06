@@ -15,11 +15,33 @@ PDF 랜덤 퀴즈 생성기
 
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
-import threading, json, os, re, fitz
+import threading, json, os, re, fitz, base64
 
 # ══════════════════════════════════════════════
 # 코드 포맷팅
 # ══════════════════════════════════════════════
+def get_page_images(page):
+    """페이지에서 이미지 추출 (작은 장식용 이미지 제외)"""
+    images = []
+    try:
+        blocks = page.get_text("dict")["blocks"]
+        for block in blocks:
+            if block.get("type") != 1:
+                continue
+            x0, y0, x1, y1 = block["bbox"]
+            w, h = x1 - x0, y1 - y0
+            if w < 80 or h < 80:
+                continue
+            img_bytes = block.get("image")
+            if not img_bytes:
+                continue
+            ext = block.get("ext", "png")
+            b64 = base64.b64encode(img_bytes).decode()
+            images.append({'y': y0, 'data': f'data:image/{ext};base64,{b64}'})
+    except Exception:
+        pass
+    return images
+
 def reformat_java(code):
     out=[]; indent=0; i=0; code=code.strip(); n=len(code)
     while i<n:
@@ -44,15 +66,23 @@ def reformat_java(code):
 
 def reformat_python(code):
     if '\n' in code and code.count('\n')>2: return code
-    for kw in ['def ','return ','for ','while ','if ','elif ','else:','print(']:
+    for kw in ['def ','return ','for ','while ','if ','elif ','else:',
+               'try:','except','finally:','print(']:
         code=re.sub(r'(?<!\n)(?<!\A)('+re.escape(kw)+r')',r'\n\1',code)
+    # 메서드 호출 앞에 줄바꿈 (예: fruits.remove( → \nfruits.remove()
+    code=re.sub(r'\)\s+(\w+[\.\[])',r')\n\1',code)
     lines=[l.strip() for l in code.split('\n') if l.strip()]
     out=[]; indent=0
     for l in lines:
-        if re.match(r'(def |class |for |while |if |elif |else:)',l):
+        if re.match(r'(else:|elif |except.*:|finally:)',l):
+            indent=max(0,indent-1)
+            out.append('    '*indent+l)
+            indent+=1
+        elif re.match(r'(def |class |for |while |if |try:)',l):
             out.append('    '*indent+l)
             if l.endswith(':'): indent+=1
-        else: out.append('    '*indent+l)
+        else:
+            out.append('    '*indent+l)
     return '\n'.join(out)
 
 def reformat_sql(code):
@@ -64,7 +94,10 @@ def reformat_sql(code):
 
 def split_code(qtxt):
     java=re.search(r'(public\s+class\s+\w+|public\s+static\s+void\s+main|System\.out\.)',qtxt)
-    py=re.search(r'(def\s+\w+\s*\(|print\s*\(|for\s+\w+\s+in\s+range)',qtxt)
+    py=re.search(r'(def\s+\w+\s*\(|print\s*\(|for\s+\w+\s+in\s+range|'
+                 r'try\s*:|except.*:|finally\s*:|'
+                 r'\w+\s*=\s*[\[\{]|'
+                 r'\w+\.\w+\s*\()',qtxt)
     sql=re.search(r'(?i)(SELECT\s+[\w\*]|INSERT\s+INTO|UPDATE\s+\w+\s+SET|DELETE\s+FROM)',qtxt)
     cands=[(m,l) for m,l in [(java,'java'),(py,'python'),(sql,'sql')] if m]
     if not cands: return qtxt.strip(),'',''
@@ -163,9 +196,16 @@ def extract_explanations(text):
 # ══════════════════════════════════════════════
 def parse_pdf(path, status_cb=None):
     doc=fitz.open(path)
-    full=''.join(doc[i].get_text() for i in range(doc.page_count))
     fname=os.path.basename(path)
     if status_cb: status_cb(f'읽는 중: {fname} ({doc.page_count}쪽)')
+
+    # 페이지별 텍스트 + 이미지 추출
+    page_data = []
+    for i in range(doc.page_count):
+        page = doc[i]
+        page_data.append({'text': page.get_text(), 'images': get_page_images(page)})
+
+    full=''.join(p['text'] for p in page_data)
 
     questions=[]
     # 해설 추출
@@ -219,6 +259,15 @@ def parse_pdf(path, status_cb=None):
                 rno=int(rm.group(1))
                 # 문제 번호는 소스 내 순서로 추정 (간단히 전역 exp_global 사용)
                 pass
+
+    # 이미지가 있는 페이지와 문제 연결
+    pages_with_images = [(p['text'], p['images']) for p in page_data if p['images']]
+    for q in questions:
+        snippet = q['q'][:25]
+        for page_text, imgs in pages_with_images:
+            if snippet in page_text:
+                q['image'] = imgs[0]['data']
+                break
 
     if status_cb: status_cb(f'완료: {fname} → {len(questions)}문제 추출')
     return questions
@@ -337,7 +386,8 @@ function render(qs){
   qs.forEach((q,i)=>{
     const d=document.createElement("div");d.className="qc";
     const ch=q.code?`<pre class="cb ${q.lang||""}">${e(q.code)}</pre>`:"";
-    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${e(q.q)}</div></div>${ch}<div class="chs" id="ch${i}"></div><div class="ra" id="ra${i}"><div class="rl" id="rl${i}"></div><div class="eb" id="eb${i}" style="display:none"></div></div><div class="src">[${e(q.source)}]</div>`;
+    const imgHtml=q.image?`<img src="${q.image}" style="max-width:100%;border-radius:8px;margin:8px 0 12px;display:block" />`:"";
+    d.innerHTML=`<div class="qh"><div class="qn">${i+1}</div><div class="qt">${e(q.q)}</div></div>${imgHtml}${ch}<div class="chs" id="ch${i}"></div><div class="ra" id="ra${i}"><div class="rl" id="rl${i}"></div><div class="eb" id="eb${i}" style="display:none"></div></div><div class="src">[${e(q.source)}]</div>`;
     C.appendChild(d);
     const chDiv=d.querySelector("#ch"+i);
     q.choices.forEach((c,ci)=>{const b=document.createElement("button");b.className="ch";b.innerHTML=`<span class="cn">${N[ci]}</span>${e(c)}`;b.onclick=()=>sel(i,ci);chDiv.appendChild(b);});
