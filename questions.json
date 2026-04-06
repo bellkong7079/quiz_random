@@ -141,8 +141,8 @@
   },
   {
     "source": "시나공 1회",
-    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?  inList = [1,2,3,4,5] answer = inList[:3]",
-    "code": "print(answer)",
+    "q": "다음 파이썬(Python) 프로그램이 실행되었을 때의 결과는?",
+    "code": "inList = [1,2,3,4,5] answer = inList[:3]\nprint(answer)",
     "lang": "python",
     "choices": [
       "[1]",
@@ -911,9 +911,9 @@
   },
   {
     "source": "시나공 2회",
-    "q": "다음 JavaScript 프로그램이 실행되었을 때, 실행 결과는?  var a = [10, 20, 30]; a.push(40); var b = a.shift( ); var c = a.pop( ); document.write(b + c);",
-    "code": "",
-    "lang": "",
+    "q": "다음 JavaScript 프로그램이 실행되었을 때, 실행 결과는?  var",
+    "code": "a = [10, 20, 30]; a.push(40); var b = a.shift( ); var c = a.pop( ); document.write(b + c);",
+    "lang": "python",
     "choices": [
       "50",
       "60",
@@ -3389,8 +3389,8 @@
   },
   {
     "source": "이기적_예상2",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? arr1 = [0, 1, 2, 3, 4]",
-    "code": "print(arr1[1:4])",
+    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은?",
+    "code": "arr1 = [0, 1, 2, 3, 4]\nprint(arr1[1:4])",
     "lang": "python",
     "choices": [
       "[0, 1, 2, 3]",
@@ -3425,34 +3425,6 @@
       "44",
       "45",
       "55\n•\u0007range(n)은 0부터 n-1까지의 정수를 생성한다. 즉, range(10)은 0~9까\n지이다.\n•for i in my_list: → i는 0부터 9까지 1씩 증가하며 10회 반복한다.\n•0부터 9까지의 합계 계산 : 0 + 1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 = 45"
-    ],
-    "answer": 2,
-    "explanation": ""
-  },
-  {
-    "source": "이기적_예상2",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은? a = [10, 20, 30, 40, 50]",
-    "code": "hap = 0\nfor i in a[-3:]:\n    hap += i\n    print(\n    hap)",
-    "lang": "python",
-    "choices": [
-      "60",
-      "90",
-      "120",
-      "150 •\u0007a[-3:] 슬라이싱은 뒤에서 세 번째 요소(-3)부터 리스트의 끝까지 추출한 다는 의미이다. •추출된 값 : 30, 40, 50 / 결과 : 30 + 40 + 50 = 120"
-    ],
-    "answer": 2,
-    "explanation": ""
-  },
-  {
-    "source": "이기적_예상4",
-    "q": "다음 파이썬 코드의 실행 결과로 옳은 것은?",
-    "code": "print(“123”, “123”, sep=”hello”)",
-    "lang": "python",
-    "choices": [
-      "123 123",
-      "123hello123",
-      "123,123",
-      "hello123123"
     ],
     "answer": 2,
     "explanation": ""

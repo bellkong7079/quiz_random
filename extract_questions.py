@@ -61,7 +61,7 @@ def reformat_python(code):
     if '\n' in code and code.count('\n') > 2:
         return code
     for kw in ['def ', 'return ', 'for ', 'while ', 'if ', 'elif ',
-                'else:', 'print(', 'result', 'total', 'hap', 'sum']:
+                'else:', 'match ', 'case ', 'print(', 'result', 'total', 'hap', 'sum']:
         code = re.sub(r'(?<!\n)(?<!\A)(' + re.escape(kw) + r')', r'\n\1', code)
     lines = [l.strip() for l in code.split('\n') if l.strip()]
     out = []; indent = 0
@@ -98,7 +98,11 @@ def split_q_and_code(q_text):
         r'(def\s+\w+\s*[\(\*]|'
         r'print\s*\(|'
         r'for\s+\w+\s+in\s+range|'
-        r'list_data\s*=|fruits\s*=|numbers\s*=|sentence\s*=|hap\s*=)',
+        r'list_data\s*=|fruits\s*=|numbers\s*=|sentence\s*=|hap\s*=|'
+        r'match\s+\w+\s*:|'           # match x:
+        r'\w+\s*=\s*\[|'              # data = [
+        r'import\s+\w+|'              # import ...
+        r'\w+\s*=\s*\{)',             # dict = {
         q_text)
     # SQL
     sql_m = re.search(
