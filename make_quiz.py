@@ -121,12 +121,15 @@ pre.cb.sql{background:#1a2a1a;color:#a8d8a8}
 </div>
 <script>
 const AQ = ''' + qs_json + ''';
-let cur=[],ans=0,ok=0,ng=0,rn=0;
+let cur=[],ans=0,ok=0,ng=0,rn=0,seen=new Set();
 
 function pick60(){
-  const a=[...AQ];
-  for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}
-  return a.slice(0,Math.min(60,a.length));
+  let unseen=AQ.map((_,i)=>i).filter(i=>!seen.has(i));
+  if(unseen.length<60){seen=new Set();unseen=AQ.map((_,i)=>i);}
+  for(let i=unseen.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[unseen[i],unseen[j]]=[unseen[j],unseen[i]];}
+  const picked=unseen.slice(0,60);
+  picked.forEach(i=>seen.add(i));
+  return picked.map(i=>AQ[i]);
 }
 
 function e(s){return(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");}
@@ -139,8 +142,10 @@ function render(qs){
     const d=document.createElement("div");
     d.className="qc";d.id="qc"+i;
     const codeHtml=q.code?`<pre class="cb ${q.lang||""}">${e(q.code)}</pre>`:"";
+    const imgHtml=q.image?`<img src="${q.image}" style="max-width:100%;border-radius:8px;margin:8px 0 12px;display:block" />`:"";
     d.innerHTML=
       `<div class="qh"><div class="qn">${i+1}</div><div class="qt">${e(q.q)}</div></div>`+
+      imgHtml+
       codeHtml+
       `<div class="chs" id="ch${i}"></div>`+
       `<div class="result-area" id="ra${i}">`+

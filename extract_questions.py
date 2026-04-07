@@ -1,9 +1,51 @@
-import fitz, sys, re, json, os
+import fitz, sys, re, json, os, base64
 sys.stdout.reconfigure(encoding='utf-8')
 
 # ──────────────────────────────────────────────
 # 보기 문자 정규화
 # ──────────────────────────────────────────────
+def get_question_region_image(doc, page_texts, q_text):
+    """문제 텍스트와 첫 보기(①) 사이 영역을 렌더링해서 이미지로 반환"""
+    snippet = q_text[:20]
+    for page_num, page_text in enumerate(page_texts):
+        if snippet not in page_text:
+            continue
+        page = doc[page_num]
+        blocks = page.get_text("blocks")
+
+        # 문제 텍스트 블록 하단 y좌표
+        q_y1 = None
+        for b in blocks:
+            if snippet in b[4].replace('\n', ' '):
+                q_y1 = b[3]
+                break
+        if q_y1 is None:
+            continue
+
+        # 문제 아래 첫 ① 블록 상단 y좌표
+        ch_y0 = None
+        for b in sorted(blocks, key=lambda x: x[1]):
+            if b[1] >= q_y1 and '①' in b[4]:
+                ch_y0 = b[1]
+                break
+        if ch_y0 is None or ch_y0 - q_y1 < 60:
+            return ''
+
+        drawings_in = [d for d in page.get_drawings()
+                       if d['rect'].y0 >= q_y1 and d['rect'].y1 <= ch_y0]
+        text_in = [b for b in blocks
+                   if b[6] == 0 and b[1] >= q_y1 and b[3] <= ch_y0]
+
+        # 트리/순서도: 선이 5개 이상이고 텍스트보다 그림이 많아야 진짜 다이어그램
+        if len(drawings_in) < 5 or len(text_in) > len(drawings_in):
+            return ''
+
+        # 해당 영역만 렌더링
+        rect = fitz.Rect(15, q_y1, page.rect.width - 15, ch_y0)
+        pix = page.get_pixmap(clip=rect, dpi=150, colorspace=fitz.csRGB)
+        return f'data:image/png;base64,{base64.b64encode(pix.tobytes("png")).decode()}'
+    return ''
+
 def norm(c):
     if c in '①': return 0
     if c in '②': return 1
@@ -120,6 +162,11 @@ def split_q_and_code(q_text):
     desc = q_text[:best_m.start()].strip()
     raw_code = q_text[best_m.start():].strip()
 
+    # 한글이 많으면 코드가 아님 (PDF 다단 추출 오류)
+    korean_ratio = len(re.findall(r'[가-힣]', raw_code)) / max(len(raw_code), 1)
+    if korean_ratio > 0.1:
+        return q_text.strip(), '', ''
+
     if lang == 'java':   code = reformat_java(raw_code)
     elif lang == 'python': code = reformat_python(raw_code)
     else:                  code = reformat_sql(raw_code)
@@ -136,7 +183,7 @@ def parse_sinagong_explanations(full_text):
         round_no = int(parts[pi])
         block = parts[pi+1] if pi+1 < len(parts) else ''
         exp_pat = re.compile(
-            r'(?:^|\n)(\d{1,2})\s+(.+?)(?=\n\d{1,2}\s|\n\d{3}\n|\Z)',
+            r'(?:^|\n)(\d{1,2})[ \t]{2,}(.+?)(?=\n\d{1,2}[ \t]{2,}|\n\d{3}\n|\Z)',
             re.DOTALL)
         for m in exp_pat.finditer(block):
             qno = int(m.group(1))
@@ -155,7 +202,8 @@ def parse_sinagong_explanations(full_text):
 # ──────────────────────────────────────────────
 def parse_sinagong(path):
     doc = fitz.open(path)
-    full = ''.join(doc[i].get_text() for i in range(doc.page_count))
+    page_texts = [doc[i].get_text() for i in range(doc.page_count)]
+    full = ''.join(page_texts)
     questions = []
 
     exp_map = parse_sinagong_explanations(full)
@@ -198,11 +246,12 @@ def parse_sinagong(path):
 
             desc, code, lang = split_q_and_code(qtxt)
             exp = exp_map.get((round_no, qno), '')
+            img = get_question_region_image(doc, page_texts, qtxt) if not code else ''
             questions.append({
                 'source': f'시나공 {round_no}회',
                 'q': desc, 'code': code, 'lang': lang,
                 'choices': choices, 'answer': ans,
-                'explanation': exp
+                'explanation': exp, 'image': img
             })
 
     print(f'  시나공 문제 추출: {len(questions)}개', file=sys.stderr)
@@ -213,7 +262,8 @@ def parse_sinagong(path):
 # ──────────────────────────────────────────────
 def parse_ikjeok(path):
     doc = fitz.open(path)
-    full = ''.join(doc[i].get_text() for i in range(doc.page_count))
+    page_texts = [doc[i].get_text() for i in range(doc.page_count)]
+    full = ''.join(page_texts)
     questions = []
     cp = re.compile(r'([①②③④])\s*(.+?)(?=[①②③④]|$)', re.DOTALL)
 
@@ -249,11 +299,12 @@ def parse_ikjeok(path):
             ans = amap.get(qno, -1)
             if ans == -1: continue
             desc, code, lang = split_q_and_code(qtxt)
+            img = get_question_region_image(doc, page_texts, qtxt) if not code else ''
             questions.append({
                 'source': f'이기적_예상{pi}',
                 'q': desc, 'code': code, 'lang': lang,
                 'choices': choices, 'answer': ans,
-                'explanation': ''
+                'explanation': '', 'image': img
             })
 
     print(f'  이기적 문제 추출: {len(questions)}개', file=sys.stderr)
