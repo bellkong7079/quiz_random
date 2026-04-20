@@ -12,36 +12,44 @@ def get_question_region_image(doc, page_texts, q_text):
             continue
         page = doc[page_num]
         blocks = page.get_text("blocks")
+        page_width = page.rect.width
 
-        # 문제 텍스트 블록 하단 y좌표
-        q_y1 = None
+        # 문제 텍스트 블록 위치 파악 (x좌표 포함)
+        q_block = None
         for b in blocks:
             if snippet in b[4].replace('\n', ' '):
-                q_y1 = b[3]
+                q_block = b
                 break
-        if q_y1 is None:
+        if q_block is None:
             continue
+        q_x0, q_y1 = q_block[0], q_block[3]
 
-        # 문제 아래 첫 ① 블록 상단 y좌표
+        # 2단 레이아웃 대응: 문제가 있는 컬럼만 처리
+        col_x0 = 0 if q_x0 < page_width / 2 else page_width / 2
+        col_x1 = page_width / 2 if q_x0 < page_width / 2 else page_width
+
+        # 같은 컬럼 내에서만 ① 블록 찾기
         ch_y0 = None
         for b in sorted(blocks, key=lambda x: x[1]):
-            if b[1] >= q_y1 and '①' in b[4]:
+            if b[1] >= q_y1 and '①' in b[4] and b[0] >= col_x0 - 10 and b[2] <= col_x1 + 10:
                 ch_y0 = b[1]
                 break
         if ch_y0 is None or ch_y0 - q_y1 < 60:
             return ''
 
         drawings_in = [d for d in page.get_drawings()
-                       if d['rect'].y0 >= q_y1 and d['rect'].y1 <= ch_y0]
+                       if d['rect'].y0 >= q_y1 and d['rect'].y1 <= ch_y0
+                       and d['rect'].x0 >= col_x0 - 10 and d['rect'].x1 <= col_x1 + 10]
         text_in = [b for b in blocks
-                   if b[6] == 0 and b[1] >= q_y1 and b[3] <= ch_y0]
+                   if b[6] == 0 and b[1] >= q_y1 and b[3] <= ch_y0
+                   and b[0] >= col_x0 - 10 and b[2] <= col_x1 + 10]
 
         # 트리/순서도: 선이 5개 이상이고 텍스트보다 그림이 많아야 진짜 다이어그램
         if len(drawings_in) < 5 or len(text_in) > len(drawings_in):
             return ''
 
-        # 해당 영역만 렌더링
-        rect = fitz.Rect(15, q_y1, page.rect.width - 15, ch_y0)
+        # 해당 컬럼 영역만 렌더링
+        rect = fitz.Rect(col_x0, q_y1, col_x1, ch_y0)
         pix = page.get_pixmap(clip=rect, dpi=150, colorspace=fitz.csRGB)
         return f'data:image/png;base64,{base64.b64encode(pix.tobytes("png")).decode()}'
     return ''
