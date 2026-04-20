@@ -3,8 +3,26 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 base = os.path.dirname(os.path.abspath(__file__))
 
-with open(os.path.join(base, 'questions.json'), encoding='utf-8') as f:
+# Usage: python make_quiz.py [input.json] [output.html] [title]
+json_file = sys.argv[1] if len(sys.argv) > 1 else 'questions.json'
+out_file  = sys.argv[2] if len(sys.argv) > 2 else None
+title     = sys.argv[3] if len(sys.argv) > 3 else None
+
+if not os.path.isabs(json_file):
+    json_file = os.path.join(base, json_file)
+
+with open(json_file, encoding='utf-8') as f:
     qs = json.load(f)
+
+# Auto-set output and title from json filename
+stem = os.path.splitext(os.path.basename(json_file))[0]
+if out_file is None:
+    out_file = os.path.join(base, stem.replace('questions', 'quiz_random').replace('_questions', '_quiz') + '.html')
+if title is None:
+    if 'sanup' in stem:
+        title = '정보처리산업기사 랜덤 모의고사'
+    else:
+        title = '프로그래밍기능사 랜덤 모의고사'
 
 qs_json = json.dumps(qs, ensure_ascii=False)
 
@@ -13,7 +31,7 @@ html = '''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>프로그래밍기능사 랜덤 모의고사</title>
+<title>''' + title + '''</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:"Malgun Gothic",sans-serif;background:#f0f2f5;color:#222}
@@ -97,7 +115,7 @@ pre.cb.sql{background:#1a2a1a;color:#a8d8a8}
 <body>
 <header>
   <div>
-    <h1>프로그래밍기능사 랜덤 모의고사</h1>
+    <h1>''' + title + '''</h1>
     <p id="ri">로딩 중...</p>
     <div class="pw"><div class="pb" id="pb" style="width:0%"></div></div>
   </div>
@@ -175,10 +193,16 @@ function sel(qi,chosen){
   const rl=document.getElementById("rl"+qi);
   const ex=document.getElementById("ex"+qi);
 
+  ra.classList.add("show");
+  if(correct===-1){
+    btns[chosen].classList.add("ok");
+    rl.textContent="정답 정보 없음 (선택: "+["①","②","③","④"][chosen]+")";
+    rl.classList.add("ok");
+    ok++;
+  } else {
   btns[chosen].classList.add(chosen===correct?"ok":"ng");
   if(chosen!==correct) btns[correct].classList.add("rv");
 
-  ra.classList.add("show");
   if(chosen===correct){
     rl.textContent="✔ 정답입니다!";
     rl.classList.add("ok");
@@ -194,6 +218,7 @@ function sel(qi,chosen){
     ex.style.display="block";
     ex.textContent="💡 "+q.explanation;
   }
+  } // end correct!==-1
 
   ans++;upd();
   if(ans===cur.length) setTimeout(showM,500);
@@ -229,7 +254,7 @@ startNew();
 </body>
 </html>'''
 
-out = os.path.join(base, 'quiz_random.html')
+out = out_file
 with open(out, 'w', encoding='utf-8') as f:
     f.write(html)
 
