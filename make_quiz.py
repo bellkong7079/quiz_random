@@ -10,6 +10,8 @@ title     = sys.argv[3] if len(sys.argv) > 3 else None
 
 if not os.path.isabs(json_file):
     json_file = os.path.join(base, json_file)
+if out_file and not os.path.isabs(out_file):
+    out_file = os.path.join(base, out_file)
 
 with open(json_file, encoding='utf-8') as f:
     qs = json.load(f)
@@ -25,6 +27,10 @@ if title is None:
         title = '프로그래밍기능사 랜덤 모의고사'
 
 qs_json = json.dumps(qs, ensure_ascii=False)
+# Prevent </script> in data from closing the HTML script block.
+# Replace < with the JSON Unicode escape < (which browsers decode as <).
+_bslash = chr(92)  # literal backslash without triggering Python's \u escape
+qs_json = qs_json.replace('<', _bslash + 'u003c')
 
 html = '''<!DOCTYPE html>
 <html lang="ko">

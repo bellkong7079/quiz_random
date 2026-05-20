@@ -24,14 +24,16 @@ def get_question_region_image(doc, page_texts, q_text):
             continue
         q_x0, q_y1 = q_block[0], q_block[3]
 
-        # 2단 레이아웃 대응: 문제가 있는 컬럼만 처리
-        col_x0 = 0 if q_x0 < page_width / 2 else page_width / 2
-        col_x1 = page_width / 2 if q_x0 < page_width / 2 else page_width
+        # 2단 레이아웃 대응: 문제 블록의 실제 x 범위를 기준으로 컬럼 한정
+        q_x1 = q_block[2]
+        margin = 30
+        col_x0 = max(0, q_x0 - margin)
+        col_x1 = min(page_width, q_x1 + margin)
 
         # 같은 컬럼 내에서만 ① 블록 찾기
         ch_y0 = None
         for b in sorted(blocks, key=lambda x: x[1]):
-            if b[1] >= q_y1 and '①' in b[4] and b[0] >= col_x0 - 10 and b[2] <= col_x1 + 10:
+            if b[1] >= q_y1 and '①' in b[4] and b[0] >= col_x0 and b[2] <= col_x1:
                 ch_y0 = b[1]
                 break
         if ch_y0 is None or ch_y0 - q_y1 < 60:
@@ -39,10 +41,10 @@ def get_question_region_image(doc, page_texts, q_text):
 
         drawings_in = [d for d in page.get_drawings()
                        if d['rect'].y0 >= q_y1 and d['rect'].y1 <= ch_y0
-                       and d['rect'].x0 >= col_x0 - 10 and d['rect'].x1 <= col_x1 + 10]
+                       and d['rect'].x0 >= col_x0 and d['rect'].x1 <= col_x1]
         text_in = [b for b in blocks
                    if b[6] == 0 and b[1] >= q_y1 and b[3] <= ch_y0
-                   and b[0] >= col_x0 - 10 and b[2] <= col_x1 + 10]
+                   and b[0] >= col_x0 and b[2] <= col_x1]
 
         # 트리/순서도: 선이 5개 이상이고 텍스트보다 그림이 많아야 진짜 다이어그램
         if len(drawings_in) < 5 or len(text_in) > len(drawings_in):
@@ -108,6 +110,16 @@ def reformat_java(code):
     return re.sub(r'\n{3,}', '\n\n', ''.join(out).strip())
 
 def reformat_python(code):
+    # PDF 추출 아티팩트: 열린 괄호 뒤 잘린 줄 합치기 (예: "print(\ntotal_\nsum)")
+    raw_lines = [l.strip() for l in code.split('\n') if l.strip()]
+    merged = []
+    for line in raw_lines:
+        if merged and merged[-1].count('(') > merged[-1].count(')'):
+            merged[-1] += line
+        else:
+            merged.append(line)
+    code = '\n'.join(merged)
+
     if '\n' in code and code.count('\n') > 2:
         return code
     for kw in ['def ', 'return ', 'for ', 'while ', 'if ', 'elif ',
@@ -148,8 +160,11 @@ def split_q_and_code(q_text):
         r'(def\s+\w+\s*[\(\*]|'
         r'print\s*\(|'
         r'for\s+\w+\s+in\s+range|'
+        r'for\s+\w+\s+in\s+\w+\s*:|'  # for i in my_list:
         r'list_data\s*=|fruits\s*=|numbers\s*=|sentence\s*=|hap\s*=|'
         r'match\s+\w+\s*:|'           # match x:
+        r'\w+\s*=\s*range\(|'         # my_list = range(10)
+        r'[a-z][a-z0-9_]+\s*=\s*\d+|' # total_sum = 0, count = 0
         r'\w+\s*=\s*\[|'              # data = [
         r'import\s+\w+|'              # import ...
         r'\w+\s*=\s*\{)',             # dict = {
